@@ -6,8 +6,9 @@ This repo is the deploy repo used for github page of npython playground, \
   serving as a online demo.
 
 ## Info
-- homepage: see metadata of this repo
-- origin repo: see link in commit message of [gh-pages branch][]
+- website deployed: see homepage metadata of this repo
+- source code: [nimpylib/npython](https://github.com/nimpylib/npython); see also: link in commit message of [gh-pages branch][]
 
 
 [gh-pages branch]: https://github.com/nimpylib/npython-play-demo/tree/gh-pages
+
