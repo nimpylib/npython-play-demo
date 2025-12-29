@@ -17162,6 +17162,7 @@ i_4362077123 = addInt(i_4362077123, 1);
 };
 };
 result_4362076526 = pyTrueObj_3204448486;
+break BeforeRet;
 };
 
 return result_4362076526;
@@ -17280,6 +17281,7 @@ self_4362076606.items.push(i_4362076683);;
 }
 
 result_4362076594 = pyNone_2835349727;
+break BeforeRet;
 };
 
 return result_4362076594;
@@ -21095,13 +21097,11 @@ return result_4294967868;
 }
 
 function eqPyListObjectMagic__OOZ79bjectsZlistobject_u650(selfNoCast_p0, other_p1) {
-var Temporary1;
-var Temporary7;
+var Temporary5;
 
 var result_4294967949 = null;
 
 BeforeRet: {
-var colontmpD__4294969593 = null;
 if (!(isObj(selfNoCast_p0.m_type, NTI4294967300))) {
 failedAssertImpl__stdZassertions_u84([112,121,111,98,106,101,99,116,46,110,105,109,40,54,50,55,44,32,51,51,41,32,96,115,101,108,102,78,111,67,97,115,116,32,111,102,32,80,121,76,105,115,116,79,98,106,101,99,116,96,32]);
 }
@@ -21114,7 +21114,6 @@ break BeforeRet;
 
 self_4294967961.readNum = addInt(self_4294967961.readNum, 1);
 try {
-try {
 if (!(ofPyListObject__OOZ79bjectsZlistobject_u167(other_p1))) {
 result_4294967949 = pyFalseObj_3204448487;
 break BeforeRet;
@@ -21126,16 +21125,16 @@ result_4294967949 = pyFalseObj_3204448487;
 break BeforeRet;
 }
 
-Label4: {
+Label2: {
 var i_4294967984 = 0;
 var colontmp__4294969590 = 0;
 colontmp__4294969590 = (self_4294967961.items).length;
 var i_4294969591 = 0;
-Label5: {
-Label6: while (true) {
-if (!(i_4294969591 < colontmp__4294969590)) break Label6;
+Label3: {
+Label4: while (true) {
+if (!(i_4294969591 < colontmp__4294969590)) break Label4;
+var colontmpD__4294969593 = false;
 var colontmpD__4294969594 = false;
-var colontmpD__4294969595 = false;
 i_4294967984 = i_4294969591;
 var i1_4294967985 = self_4294967961.items[chckIndx(i_4294967984, 0, (self_4294967961.items).length - 1)];
 var i2_4294967986 = tOther_4294967970.items[chckIndx(i_4294967984, 0, (tOther_4294967970.items).length - 1)];
@@ -21153,15 +21152,15 @@ var funHEX60gensym70_4294968008 = funHEX60gensym71_4294967990;
 var resHEX60gensym70_4294968009 = funHEX60gensym70_4294968008(i1_4294967985, i2_4294967986);
 var retObj_4294968011 = resHEX60gensym70_4294968009;
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(retObj_4294968011)) {
-colontmpD__4294969594 = retObj_4294968011.thrown;
-Temporary7 = colontmpD__4294969594;
+colontmpD__4294969593 = retObj_4294968011.thrown;
+Temporary5 = colontmpD__4294969593;
 }
 else {
-colontmpD__4294969595 = false;
-Temporary7 = colontmpD__4294969595;
+colontmpD__4294969594 = false;
+Temporary5 = colontmpD__4294969594;
 }
 
-if (Temporary7) {
+if (Temporary5) {
 result_4294967949 = retObj_4294968011;
 break BeforeRet;
 }
@@ -21179,14 +21178,11 @@ i_4294969591 = addInt(i_4294969591, 1);
 }
 };
 };
-colontmpD__4294969593 = pyTrueObj_3204448486;
-colontmpD__4294969593;
-} finally {
-}
+result_4294967949 = pyTrueObj_3204448486;
+break BeforeRet;
 } finally {
 self_4294967961.readNum = subInt(self_4294967961.readNum, 1);
 }
-result_4294967949 = Temporary1;
 };
 
 return result_4294967949;
@@ -21208,14 +21204,14 @@ failedAssertImpl__stdZassertions_u84([112,121,111,98,106,101,99,116,46,110,105,1
 
 var self_4294968042 = selfNoCast_p0;
 if ((1 < (args_p1).length)) {
-var colontmpD__4294969614 = [];
+var colontmpD__4294969613 = [];
 Label1: {
 var fmtRes_4294968050 = [mnewString(0)];
 fmtRes_4294968050[0].push.apply(fmtRes_4294968050[0], [32,101,120,112,101,99,116,101,100,32,97,116,32,109,111,115,116,32,49,32,97,114,103,115,44,32,103,111,116,32]);;
 formatValue__OOZ80arserZgrammar_u4763(fmtRes_4294968050, 0, (args_p1).length);
-colontmpD__4294969614 = fmtRes_4294968050[0];
+colontmpD__4294969613 = fmtRes_4294968050[0];
 };
-var msg_4294968060 = ([108,105,115,116]).concat(colontmpD__4294969614);
+var msg_4294968060 = ([108,105,115,116]).concat(colontmpD__4294969613);
 result_4294968030 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyAscii__OOZ79bjectsZstringobject_u997(msg_4294968060));
 break BeforeRet;
 }
@@ -21228,49 +21224,49 @@ else { self_4294968042.items.length = 0; };
 if (((args_p1).length == 1)) {
 var arg_4294968074 = args_p1[chckIndx(0, 0, (args_p1).length - 1)];
 if (ofPyDictObject__OOZ79bjectsZdictobjectZdecl_u158(arg_4294968074)) {
+var colontmpD__4294969615 = false;
 var colontmpD__4294969616 = false;
-var colontmpD__4294969617 = false;
 var retTupleHEX60gensym88_4294968086 = {Field0: null, Field1: null};
 Label2: {
 var iterFuncHEX60gensym88_4294968088 = itemsPyDictObjectMethod__OOZ79bjectsZdictobject_u984(arg_4294968074, [], null).pybase_head.pyType.magicMethods.Field60;
 if ((iterFuncHEX60gensym88_4294968088 == null)) {
 var msgHEX60gensym88_4294968092 = (itemsPyDictObjectMethod__OOZ79bjectsZdictobject_u984(arg_4294968074, [], null).pybase_head.pyType.name).concat([32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);
-var colontmp__4294969598 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym88_4294968092, false));
-var colontmp__4294969599 = null;
-retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969598, Field1: colontmp__4294969599}, NTI4294967730);
+var colontmp__4294969597 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym88_4294968092, false));
+var colontmp__4294969598 = null;
+retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969597, Field1: colontmp__4294969598}, NTI4294967730);
 break Label2;
 }
 
 var iterObjHEX60gensym88_4294968099 = iterFuncHEX60gensym88_4294968088(itemsPyDictObjectMethod__OOZ79bjectsZdictobject_u984(arg_4294968074, [], null));
 var iternextFuncHEX60gensym88_4294968100 = iterObjHEX60gensym88_4294968099.pybase_head.pyType.magicMethods.Field61;
 if ((iternextFuncHEX60gensym88_4294968100 == null)) {
-var colontmpD__4294969615 = [];
+var colontmpD__4294969614 = [];
 Label3: {
 var fmtRes_4294968108 = mnewString(0);
 fmtRes_4294968108.push.apply(fmtRes_4294968108, [105,116,101,114,40,41,32,114,101,116,117,114,110,101,100,32,110,111,110,45,105,116,101,114,97,116,111,114,32,111,102,32,116,121,112,101,32]);;
-colontmpD__4294969615 = fmtRes_4294968108;
+colontmpD__4294969614 = fmtRes_4294968108;
 };
-var msgHEX60gensym88_4294968109 = (colontmpD__4294969615).concat(iterObjHEX60gensym88_4294968099.pybase_head.pyType.name);
-var colontmp__4294969601 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym88_4294968109, false));
-var colontmp__4294969602 = null;
-retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969601, Field1: colontmp__4294969602}, NTI4294967730);
+var msgHEX60gensym88_4294968109 = (colontmpD__4294969614).concat(iterObjHEX60gensym88_4294968099.pybase_head.pyType.name);
+var colontmp__4294969600 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym88_4294968109, false));
+var colontmp__4294969601 = null;
+retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969600, Field1: colontmp__4294969601}, NTI4294967730);
 break Label2;
 }
 
-var colontmp__4294969603 = iterObjHEX60gensym88_4294968099;
-var colontmp__4294969604 = iternextFuncHEX60gensym88_4294968100;
-retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969603, Field1: colontmp__4294969604}, NTI4294967730);
+var colontmp__4294969602 = iterObjHEX60gensym88_4294968099;
+var colontmp__4294969603 = iternextFuncHEX60gensym88_4294968100;
+retTupleHEX60gensym88_4294968086 = nimCopy(retTupleHEX60gensym88_4294968086, {Field0: colontmp__4294969602, Field1: colontmp__4294969603}, NTI4294967730);
 };
 var tmpTuple_4294968116 = nimCopy(null, retTupleHEX60gensym88_4294968086, NTI2969567260);
 var iterableHEX60gensym87_4294968117 = tmpTuple_4294968116["Field0"];
 var nextMethodHEX60gensym87_4294968118 = tmpTuple_4294968116["Field1"];
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(iterableHEX60gensym87_4294968117)) {
-colontmpD__4294969616 = iterableHEX60gensym87_4294968117.thrown;
-Temporary4 = colontmpD__4294969616;
+colontmpD__4294969615 = iterableHEX60gensym87_4294968117.thrown;
+Temporary4 = colontmpD__4294969615;
 }
 else {
-colontmpD__4294969617 = false;
-Temporary4 = colontmpD__4294969617;
+colontmpD__4294969616 = false;
+Temporary4 = colontmpD__4294969616;
 }
 
 if (Temporary4) {
@@ -21281,20 +21277,20 @@ break BeforeRet;
 Label5: {
 Label6: while (true) {
 if (!true) break Label6;
+var colontmpD__4294969617 = false;
 var colontmpD__4294969618 = false;
-var colontmpD__4294969619 = false;
 var i_4294968119 = nextMethodHEX60gensym87_4294968118(iterableHEX60gensym87_4294968117);
 if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(i_4294968119)) {
 break Label5;
 }
 
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(i_4294968119)) {
-colontmpD__4294969618 = i_4294968119.thrown;
-Temporary7 = colontmpD__4294969618;
+colontmpD__4294969617 = i_4294968119.thrown;
+Temporary7 = colontmpD__4294969617;
 }
 else {
-colontmpD__4294969619 = false;
-Temporary7 = colontmpD__4294969619;
+colontmpD__4294969618 = false;
+Temporary7 = colontmpD__4294969618;
 }
 
 if (Temporary7) {
@@ -21307,49 +21303,49 @@ self_4294968042.items.push(i_4294968119);;
 };
 }
 else {
+var colontmpD__4294969620 = false;
 var colontmpD__4294969621 = false;
-var colontmpD__4294969622 = false;
 var retTupleHEX60gensym102_4294968133 = {Field0: null, Field1: null};
 Label8: {
 var iterFuncHEX60gensym102_4294968135 = arg_4294968074.pybase_head.pyType.magicMethods.Field60;
 if ((iterFuncHEX60gensym102_4294968135 == null)) {
 var msgHEX60gensym102_4294968139 = (arg_4294968074.pybase_head.pyType.name).concat([32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);
-var colontmp__4294969606 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym102_4294968139, false));
-var colontmp__4294969607 = null;
-retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969606, Field1: colontmp__4294969607}, NTI4294967752);
+var colontmp__4294969605 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym102_4294968139, false));
+var colontmp__4294969606 = null;
+retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969605, Field1: colontmp__4294969606}, NTI4294967752);
 break Label8;
 }
 
 var iterObjHEX60gensym102_4294968146 = iterFuncHEX60gensym102_4294968135(arg_4294968074);
 var iternextFuncHEX60gensym102_4294968147 = iterObjHEX60gensym102_4294968146.pybase_head.pyType.magicMethods.Field61;
 if ((iternextFuncHEX60gensym102_4294968147 == null)) {
-var colontmpD__4294969620 = [];
+var colontmpD__4294969619 = [];
 Label9: {
 var fmtRes_4294968155 = mnewString(0);
 fmtRes_4294968155.push.apply(fmtRes_4294968155, [105,116,101,114,40,41,32,114,101,116,117,114,110,101,100,32,110,111,110,45,105,116,101,114,97,116,111,114,32,111,102,32,116,121,112,101,32]);;
-colontmpD__4294969620 = fmtRes_4294968155;
+colontmpD__4294969619 = fmtRes_4294968155;
 };
-var msgHEX60gensym102_4294968156 = (colontmpD__4294969620).concat(iterObjHEX60gensym102_4294968146.pybase_head.pyType.name);
-var colontmp__4294969609 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym102_4294968156, false));
-var colontmp__4294969610 = null;
-retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969609, Field1: colontmp__4294969610}, NTI4294967752);
+var msgHEX60gensym102_4294968156 = (colontmpD__4294969619).concat(iterObjHEX60gensym102_4294968146.pybase_head.pyType.name);
+var colontmp__4294969608 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym102_4294968156, false));
+var colontmp__4294969609 = null;
+retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969608, Field1: colontmp__4294969609}, NTI4294967752);
 break Label8;
 }
 
-var colontmp__4294969611 = iterObjHEX60gensym102_4294968146;
-var colontmp__4294969612 = iternextFuncHEX60gensym102_4294968147;
-retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969611, Field1: colontmp__4294969612}, NTI4294967752);
+var colontmp__4294969610 = iterObjHEX60gensym102_4294968146;
+var colontmp__4294969611 = iternextFuncHEX60gensym102_4294968147;
+retTupleHEX60gensym102_4294968133 = nimCopy(retTupleHEX60gensym102_4294968133, {Field0: colontmp__4294969610, Field1: colontmp__4294969611}, NTI4294967752);
 };
 var tmpTuple_4294968163 = nimCopy(null, retTupleHEX60gensym102_4294968133, NTI2969567260);
 var iterableHEX60gensym101_4294968164 = tmpTuple_4294968163["Field0"];
 var nextMethodHEX60gensym101_4294968165 = tmpTuple_4294968163["Field1"];
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(iterableHEX60gensym101_4294968164)) {
-colontmpD__4294969621 = iterableHEX60gensym101_4294968164.thrown;
-Temporary10 = colontmpD__4294969621;
+colontmpD__4294969620 = iterableHEX60gensym101_4294968164.thrown;
+Temporary10 = colontmpD__4294969620;
 }
 else {
-colontmpD__4294969622 = false;
-Temporary10 = colontmpD__4294969622;
+colontmpD__4294969621 = false;
+Temporary10 = colontmpD__4294969621;
 }
 
 if (Temporary10) {
@@ -21360,20 +21356,20 @@ break BeforeRet;
 Label11: {
 Label12: while (true) {
 if (!true) break Label12;
+var colontmpD__4294969622 = false;
 var colontmpD__4294969623 = false;
-var colontmpD__4294969624 = false;
 var i_4294968166 = nextMethodHEX60gensym101_4294968165(iterableHEX60gensym101_4294968164);
 if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(i_4294968166)) {
 break Label11;
 }
 
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(i_4294968166)) {
-colontmpD__4294969623 = i_4294968166.thrown;
-Temporary13 = colontmpD__4294969623;
+colontmpD__4294969622 = i_4294968166.thrown;
+Temporary13 = colontmpD__4294969622;
 }
 else {
-colontmpD__4294969624 = false;
-Temporary13 = colontmpD__4294969624;
+colontmpD__4294969623 = false;
+Temporary13 = colontmpD__4294969623;
 }
 
 if (Temporary13) {
@@ -21389,6 +21385,7 @@ self_4294968042.items.push(i_4294968166);;
 }
 
 result_4294968030 = pyNone_2835349727;
+break BeforeRet;
 };
 
 return result_4294968030;
@@ -21467,18 +21464,18 @@ break BeforeRet;
 }
 
 if (ofPySliceObject__OOZ79bjectsZsliceobject_u155(other_p1)) {
+var colontmpD__4294969624 = false;
 var colontmpD__4294969625 = false;
-var colontmpD__4294969626 = false;
 var slice_4294968258 = other_p1;
 var newObj_4294968259 = newPyList__OOZ79bjectsZlistobject_u248();
 var retObj_4294968266 = getSliceItems__OOZ79bjectsZtupleobject73mpl_u580(slice_4294968258, self_4294968230.items, newObj_4294968259, "items");
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(retObj_4294968266)) {
-colontmpD__4294969625 = retObj_4294968266.thrown;
-Temporary2 = colontmpD__4294969625;
+colontmpD__4294969624 = retObj_4294968266.thrown;
+Temporary2 = colontmpD__4294969624;
 }
 else {
-colontmpD__4294969626 = false;
-Temporary2 = colontmpD__4294969626;
+colontmpD__4294969625 = false;
+Temporary2 = colontmpD__4294969625;
 }
 
 if (Temporary2) {
@@ -21512,7 +21509,7 @@ var Temporary7;
 var result_4294968299 = null;
 
 BeforeRet: {
-var colontmpD__4294969632 = null;
+var colontmpD__4294969631 = null;
 if (!((kwargs_p2 == null))) {
 result_4294968299 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(HEX26__OOZ79bjectsZstringobject_u1011(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108([105,110,100,101,120], false), newPyString__OOZ79bjectsZexceptionsZbaseapi_u108([40,41,32,116,97,107,101,115,32,110,111,32,107,101,121,119,111,114,100,32,97,114,103,117,109,101,110,116,115], false)));
 break BeforeRet;
@@ -21536,20 +21533,20 @@ break BeforeRet;
 
 self_4294968333.readNum = addInt(self_4294968333.readNum, 1);
 try {
-var colontmpD__4294969635 = [];
+var colontmpD__4294969634 = [];
 try {
 Label4: {
 var idx_4294968347 = 0;
 var item_4294968348 = null;
-var i_4294969628 = 0;
-var L_4294969629 = (self_4294968333.items).length;
+var i_4294969627 = 0;
+var L_4294969628 = (self_4294968333.items).length;
 Label5: {
 Label6: while (true) {
-if (!(i_4294969628 < L_4294969629)) break Label6;
+if (!(i_4294969627 < L_4294969628)) break Label6;
+var colontmpD__4294969632 = false;
 var colontmpD__4294969633 = false;
-var colontmpD__4294969634 = false;
-idx_4294968347 = i_4294969628;
-item_4294968348 = self_4294968333.items[chckIndx(i_4294969628, 0, (self_4294968333.items).length - 1)];
+idx_4294968347 = i_4294969627;
+item_4294968348 = self_4294968333.items[chckIndx(i_4294969627, 0, (self_4294968333.items).length - 1)];
 var funHEX60gensym143_4294968352 = item_4294968348.pybase_head.pyType.magicMethods.Field38;
 if ((funHEX60gensym143_4294968352 == null)) {
 var objTypeStrHEX60gensym147_4294968360 = nimCopy(null, item_4294968348.pybase_head.pyType.name, NTI33554449);
@@ -21564,12 +21561,12 @@ var funHEX60gensym142_4294968370 = funHEX60gensym143_4294968352;
 var resHEX60gensym142_4294968371 = funHEX60gensym142_4294968370(item_4294968348, target_4294968321);
 var retObj_4294968373 = resHEX60gensym142_4294968371;
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(retObj_4294968373)) {
-colontmpD__4294969633 = retObj_4294968373.thrown;
-Temporary7 = colontmpD__4294969633;
+colontmpD__4294969632 = retObj_4294968373.thrown;
+Temporary7 = colontmpD__4294969632;
 }
 else {
-colontmpD__4294969634 = false;
-Temporary7 = colontmpD__4294969634;
+colontmpD__4294969633 = false;
+Temporary7 = colontmpD__4294969633;
 }
 
 if (Temporary7) {
@@ -21582,8 +21579,8 @@ result_4294968299 = newPyInt__OOZ79bjectsZtupleobject_u362(idx_4294968347);
 break BeforeRet;
 }
 
-i_4294969628 += 1;
-if (!(((self_4294968333.items).length == L_4294969629))) {
+i_4294969627 += 1;
+if (!(((self_4294968333.items).length == L_4294969628))) {
 failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
 }
 
@@ -21594,11 +21591,11 @@ Label8: {
 var fmtRes_4294968381 = [mnewString(0)];
 formatValue__OOZ79bjectsZtupleobject73mpl_u782(fmtRes_4294968381, 0, target_4294968321);
 fmtRes_4294968381[0].push.apply(fmtRes_4294968381[0], [32,105,115,32,110,111,116,32,105,110,32]);;
-colontmpD__4294969635 = fmtRes_4294968381[0];
+colontmpD__4294969634 = fmtRes_4294968381[0];
 };
-var msg_4294968388 = (colontmpD__4294969635).concat([108,105,115,116]);
-colontmpD__4294969632 = newValueError__OOZ79bjectsZexceptionsZbase_u6080(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msg_4294968388, false));
-colontmpD__4294969632;
+var msg_4294968388 = (colontmpD__4294969634).concat([108,105,115,116]);
+colontmpD__4294969631 = newValueError__OOZ79bjectsZexceptionsZbase_u6080(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msg_4294968388, false));
+colontmpD__4294969631;
 } finally {
 }
 } finally {
@@ -21643,14 +21640,14 @@ try {
 var count_4294968451 = 0;
 Label2: {
 var item_4294968455 = null;
-var i_4294969637 = 0;
-var L_4294969638 = (self_4294968442.items).length;
+var i_4294969636 = 0;
+var L_4294969637 = (self_4294968442.items).length;
 Label3: {
 Label4: while (true) {
-if (!(i_4294969637 < L_4294969638)) break Label4;
+if (!(i_4294969636 < L_4294969637)) break Label4;
+var colontmpD__4294969639 = false;
 var colontmpD__4294969640 = false;
-var colontmpD__4294969641 = false;
-item_4294968455 = self_4294968442.items[chckIndx(i_4294969637, 0, (self_4294968442.items).length - 1)];
+item_4294968455 = self_4294968442.items[chckIndx(i_4294969636, 0, (self_4294968442.items).length - 1)];
 var funHEX60gensym167_4294968459 = item_4294968455.pybase_head.pyType.magicMethods.Field38;
 if ((funHEX60gensym167_4294968459 == null)) {
 var objTypeStrHEX60gensym171_4294968467 = nimCopy(null, item_4294968455.pybase_head.pyType.name, NTI33554449);
@@ -21665,12 +21662,12 @@ var funHEX60gensym166_4294968477 = funHEX60gensym167_4294968459;
 var resHEX60gensym166_4294968478 = funHEX60gensym166_4294968477(item_4294968455, target_4294968430);
 var retObj_4294968480 = resHEX60gensym166_4294968478;
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(retObj_4294968480)) {
-colontmpD__4294969640 = retObj_4294968480.thrown;
-Temporary5 = colontmpD__4294969640;
+colontmpD__4294969639 = retObj_4294968480.thrown;
+Temporary5 = colontmpD__4294969639;
 }
 else {
-colontmpD__4294969641 = false;
-Temporary5 = colontmpD__4294969641;
+colontmpD__4294969640 = false;
+Temporary5 = colontmpD__4294969640;
 }
 
 if (Temporary5) {
@@ -21682,8 +21679,8 @@ if (isPyTrueObj__OOZ79bjectsZtupleobject_u9(retObj_4294968480)) {
 count_4294968451 = addInt(count_4294968451, 1);
 }
 
-i_4294969637 += 1;
-if (!(((self_4294968442.items).length == L_4294969638))) {
+i_4294969636 += 1;
+if (!(((self_4294968442.items).length == L_4294969637))) {
 failedAssertImpl__stdZassertions_u84(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
 }
 
@@ -21745,49 +21742,49 @@ if (ofPyListObject__OOZ79bjectsZlistobject_u167(other_p1)) {
 add__OOZ79bjectsZtupleobject73mpl_u225(self_p0, "items", other_p1.items);
 }
 else {
+var colontmpD__4294969650 = false;
 var colontmpD__4294969651 = false;
-var colontmpD__4294969652 = false;
 var retTupleHEX60gensym179_4294968526 = {Field0: null, Field1: null};
 Label1: {
 var iterFuncHEX60gensym179_4294968528 = other_p1.pybase_head.pyType.magicMethods.Field60;
 if ((iterFuncHEX60gensym179_4294968528 == null)) {
 var msgHEX60gensym179_4294968532 = (other_p1.pybase_head.pyType.name).concat([32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);
-var colontmp__4294969642 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym179_4294968532, false));
-var colontmp__4294969643 = null;
-retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969642, Field1: colontmp__4294969643}, NTI4294967941);
+var colontmp__4294969641 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym179_4294968532, false));
+var colontmp__4294969642 = null;
+retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969641, Field1: colontmp__4294969642}, NTI4294967941);
 break Label1;
 }
 
 var iterObjHEX60gensym179_4294968539 = iterFuncHEX60gensym179_4294968528(other_p1);
 var iternextFuncHEX60gensym179_4294968540 = iterObjHEX60gensym179_4294968539.pybase_head.pyType.magicMethods.Field61;
 if ((iternextFuncHEX60gensym179_4294968540 == null)) {
-var colontmpD__4294969650 = [];
+var colontmpD__4294969649 = [];
 Label2: {
 var fmtRes_4294968548 = mnewString(0);
 fmtRes_4294968548.push.apply(fmtRes_4294968548, [105,116,101,114,40,41,32,114,101,116,117,114,110,101,100,32,110,111,110,45,105,116,101,114,97,116,111,114,32,111,102,32,116,121,112,101,32]);;
-colontmpD__4294969650 = fmtRes_4294968548;
+colontmpD__4294969649 = fmtRes_4294968548;
 };
-var msgHEX60gensym179_4294968549 = (colontmpD__4294969650).concat(iterObjHEX60gensym179_4294968539.pybase_head.pyType.name);
-var colontmp__4294969645 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym179_4294968549, false));
-var colontmp__4294969646 = null;
-retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969645, Field1: colontmp__4294969646}, NTI4294967941);
+var msgHEX60gensym179_4294968549 = (colontmpD__4294969649).concat(iterObjHEX60gensym179_4294968539.pybase_head.pyType.name);
+var colontmp__4294969644 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym179_4294968549, false));
+var colontmp__4294969645 = null;
+retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969644, Field1: colontmp__4294969645}, NTI4294967941);
 break Label1;
 }
 
-var colontmp__4294969647 = iterObjHEX60gensym179_4294968539;
-var colontmp__4294969648 = iternextFuncHEX60gensym179_4294968540;
-retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969647, Field1: colontmp__4294969648}, NTI4294967941);
+var colontmp__4294969646 = iterObjHEX60gensym179_4294968539;
+var colontmp__4294969647 = iternextFuncHEX60gensym179_4294968540;
+retTupleHEX60gensym179_4294968526 = nimCopy(retTupleHEX60gensym179_4294968526, {Field0: colontmp__4294969646, Field1: colontmp__4294969647}, NTI4294967941);
 };
 var tmpTuple_4294968556 = nimCopy(null, retTupleHEX60gensym179_4294968526, NTI2969567260);
 var iterableHEX60gensym178_4294968557 = tmpTuple_4294968556["Field0"];
 var nextMethodHEX60gensym178_4294968558 = tmpTuple_4294968556["Field1"];
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(iterableHEX60gensym178_4294968557)) {
-colontmpD__4294969651 = iterableHEX60gensym178_4294968557.thrown;
-Temporary3 = colontmpD__4294969651;
+colontmpD__4294969650 = iterableHEX60gensym178_4294968557.thrown;
+Temporary3 = colontmpD__4294969650;
 }
 else {
-colontmpD__4294969652 = false;
-Temporary3 = colontmpD__4294969652;
+colontmpD__4294969651 = false;
+Temporary3 = colontmpD__4294969651;
 }
 
 if (Temporary3) {
@@ -21798,20 +21795,20 @@ break BeforeRet;
 Label4: {
 Label5: while (true) {
 if (!true) break Label5;
+var colontmpD__4294969652 = false;
 var colontmpD__4294969653 = false;
-var colontmpD__4294969654 = false;
 var nextObj_4294968559 = nextMethodHEX60gensym178_4294968558(iterableHEX60gensym178_4294968557);
 if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(nextObj_4294968559)) {
 break Label4;
 }
 
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(nextObj_4294968559)) {
-colontmpD__4294969653 = nextObj_4294968559.thrown;
-Temporary6 = colontmpD__4294969653;
+colontmpD__4294969652 = nextObj_4294968559.thrown;
+Temporary6 = colontmpD__4294969652;
 }
 else {
-colontmpD__4294969654 = false;
-Temporary6 = colontmpD__4294969654;
+colontmpD__4294969653 = false;
+Temporary6 = colontmpD__4294969653;
 }
 
 if (Temporary6) {
@@ -21965,13 +21962,13 @@ var L_4294968739 = addInt(subInt(x_p1.b, a_4294968737), 1);
 if ((L_4294968739 == (b_p2).length)) {
 Label1: {
 var i_4294968747 = 0;
-var i_4294969711 = 0;
+var i_4294969710 = 0;
 Label2: {
 Label3: while (true) {
-if (!(i_4294969711 < L_4294968739)) break Label3;
-i_4294968747 = i_4294969711;
+if (!(i_4294969710 < L_4294968739)) break Label3;
+i_4294968747 = i_4294969710;
 s_p0[s_p0_Idx][chckIndx(addInt(i_4294968747, a_4294968737), 0, (s_p0[s_p0_Idx]).length - 1)] = b_p2[chckIndx(i_4294968747, 0, (b_p2).length - 1)];
-i_4294969711 = addInt(i_4294969711, 1);
+i_4294969710 = addInt(i_4294969710, 1);
 }
 };
 };
@@ -21984,17 +21981,17 @@ if (s_p0[s_p0_Idx].length < chckRange(newLenHEX60gensym220_4294968760, 0, 214748
 else { s_p0[s_p0_Idx].length = chckRange(newLenHEX60gensym220_4294968760, 0, 2147483647); };
 Label4: {
 var iHEX60gensym220_4294968773 = 0;
+var colontmp__4294969713 = 0;
 var colontmp__4294969714 = 0;
-var colontmp__4294969715 = 0;
-colontmp__4294969714 = subInt(newLenHEX60gensym220_4294968760, 1);
-colontmp__4294969715 = addInt(a_4294968737, (b_p2).length);
-var res_4294969716 = colontmp__4294969714;
+colontmp__4294969713 = subInt(newLenHEX60gensym220_4294968760, 1);
+colontmp__4294969714 = addInt(a_4294968737, (b_p2).length);
+var res_4294969715 = colontmp__4294969713;
 Label5: {
 Label6: while (true) {
-if (!(colontmp__4294969715 <= res_4294969716)) break Label6;
-iHEX60gensym220_4294968773 = res_4294969716;
+if (!(colontmp__4294969714 <= res_4294969715)) break Label6;
+iHEX60gensym220_4294968773 = res_4294969715;
 s_p0[s_p0_Idx][chckIndx(iHEX60gensym220_4294968773, 0, (s_p0[s_p0_Idx]).length - 1)] = s_p0[s_p0_Idx][chckIndx(subInt(iHEX60gensym220_4294968773, shiftHEX60gensym220_4294968756), 0, (s_p0[s_p0_Idx]).length - 1)];
-res_4294969716 = subInt(res_4294969716, 1);
+res_4294969715 = subInt(res_4294969715, 1);
 }
 };
 };
@@ -22002,17 +21999,17 @@ res_4294969716 = subInt(res_4294969716, 1);
 else {
 Label7: {
 var iHEX60gensym220_4294968782 = 0;
+var colontmp__4294969718 = 0;
 var colontmp__4294969719 = 0;
-var colontmp__4294969720 = 0;
-colontmp__4294969719 = addInt(a_4294968737, (b_p2).length);
-colontmp__4294969720 = subInt(newLenHEX60gensym220_4294968760, 1);
-var res_4294969721 = colontmp__4294969719;
+colontmp__4294969718 = addInt(a_4294968737, (b_p2).length);
+colontmp__4294969719 = subInt(newLenHEX60gensym220_4294968760, 1);
+var res_4294969720 = colontmp__4294969718;
 Label8: {
 Label9: while (true) {
-if (!(res_4294969721 <= colontmp__4294969720)) break Label9;
-iHEX60gensym220_4294968782 = res_4294969721;
+if (!(res_4294969720 <= colontmp__4294969719)) break Label9;
+iHEX60gensym220_4294968782 = res_4294969720;
 s_p0[s_p0_Idx][chckIndx(iHEX60gensym220_4294968782, 0, (s_p0[s_p0_Idx]).length - 1)] = s_p0[s_p0_Idx][chckIndx(subInt(iHEX60gensym220_4294968782, shiftHEX60gensym220_4294968756), 0, (s_p0[s_p0_Idx]).length - 1)];
-res_4294969721 = addInt(res_4294969721, 1);
+res_4294969720 = addInt(res_4294969720, 1);
 }
 };
 };
@@ -22022,15 +22019,15 @@ else { s_p0[s_p0_Idx].length = chckRange(newLenHEX60gensym220_4294968760, 0, 214
 
 Label10: {
 var iHEX60gensym220_4294968794 = 0;
-var colontmp__4294969724 = 0;
-colontmp__4294969724 = (b_p2).length;
-var i_4294969725 = 0;
+var colontmp__4294969723 = 0;
+colontmp__4294969723 = (b_p2).length;
+var i_4294969724 = 0;
 Label11: {
 Label12: while (true) {
-if (!(i_4294969725 < colontmp__4294969724)) break Label12;
-iHEX60gensym220_4294968794 = i_4294969725;
+if (!(i_4294969724 < colontmp__4294969723)) break Label12;
+iHEX60gensym220_4294968794 = i_4294969724;
 s_p0[s_p0_Idx][chckIndx(addInt(a_4294968737, iHEX60gensym220_4294968794), 0, (s_p0[s_p0_Idx]).length - 1)] = b_p2[chckIndx(iHEX60gensym220_4294968794, 0, (b_p2).length - 1)];
-i_4294969725 = addInt(i_4294969725, 1);
+i_4294969724 = addInt(i_4294969724, 1);
 }
 };
 };
@@ -22100,50 +22097,50 @@ var L_4294968668 = (self_4294968640.items).length;
 var nslice_4294968670 = [({a: 0, b: 0})];
 var ind_4294968671 = indices__OOZ79bjectsZsliceobject73mpl_u210(slice_4294968663, L_4294968668);
 if (toNimSlice__OOZ79bjectsZsliceobject73mpl_u704(ind_4294968671, L_4294968668, nslice_4294968670[0])) {
+var colontmpD__4294969698 = false;
 var colontmpD__4294969699 = false;
-var colontmpD__4294969700 = false;
 var ls_4294968672 = [];
 var retTupleHEX60gensym207_4294968682 = {Field0: null, Field1: null};
 Label2: {
 var iterFuncHEX60gensym207_4294968684 = iterableToLoop_4294968664.pybase_head.pyType.magicMethods.Field60;
 if ((iterFuncHEX60gensym207_4294968684 == null)) {
 var msgHEX60gensym207_4294968688 = (iterableToLoop_4294968664.pybase_head.pyType.name).concat([32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);
-var colontmp__4294969655 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym207_4294968688, false));
-var colontmp__4294969656 = null;
-retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969655, Field1: colontmp__4294969656}, NTI4294968010);
+var colontmp__4294969654 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym207_4294968688, false));
+var colontmp__4294969655 = null;
+retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969654, Field1: colontmp__4294969655}, NTI4294968010);
 break Label2;
 }
 
 var iterObjHEX60gensym207_4294968695 = iterFuncHEX60gensym207_4294968684(iterableToLoop_4294968664);
 var iternextFuncHEX60gensym207_4294968696 = iterObjHEX60gensym207_4294968695.pybase_head.pyType.magicMethods.Field61;
 if ((iternextFuncHEX60gensym207_4294968696 == null)) {
-var colontmpD__4294969698 = [];
+var colontmpD__4294969697 = [];
 Label3: {
 var fmtRes_4294968704 = mnewString(0);
 fmtRes_4294968704.push.apply(fmtRes_4294968704, [105,116,101,114,40,41,32,114,101,116,117,114,110,101,100,32,110,111,110,45,105,116,101,114,97,116,111,114,32,111,102,32,116,121,112,101,32]);;
-colontmpD__4294969698 = fmtRes_4294968704;
+colontmpD__4294969697 = fmtRes_4294968704;
 };
-var msgHEX60gensym207_4294968705 = (colontmpD__4294969698).concat(iterObjHEX60gensym207_4294968695.pybase_head.pyType.name);
-var colontmp__4294969658 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym207_4294968705, false));
-var colontmp__4294969659 = null;
-retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969658, Field1: colontmp__4294969659}, NTI4294968010);
+var msgHEX60gensym207_4294968705 = (colontmpD__4294969697).concat(iterObjHEX60gensym207_4294968695.pybase_head.pyType.name);
+var colontmp__4294969657 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym207_4294968705, false));
+var colontmp__4294969658 = null;
+retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969657, Field1: colontmp__4294969658}, NTI4294968010);
 break Label2;
 }
 
-var colontmp__4294969660 = iterObjHEX60gensym207_4294968695;
-var colontmp__4294969661 = iternextFuncHEX60gensym207_4294968696;
-retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969660, Field1: colontmp__4294969661}, NTI4294968010);
+var colontmp__4294969659 = iterObjHEX60gensym207_4294968695;
+var colontmp__4294969660 = iternextFuncHEX60gensym207_4294968696;
+retTupleHEX60gensym207_4294968682 = nimCopy(retTupleHEX60gensym207_4294968682, {Field0: colontmp__4294969659, Field1: colontmp__4294969660}, NTI4294968010);
 };
 var tmpTuple_4294968712 = nimCopy(null, retTupleHEX60gensym207_4294968682, NTI2969567260);
 var iterableHEX60gensym206_4294968713 = tmpTuple_4294968712["Field0"];
 var nextMethodHEX60gensym206_4294968714 = tmpTuple_4294968712["Field1"];
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(iterableHEX60gensym206_4294968713)) {
-colontmpD__4294969699 = iterableHEX60gensym206_4294968713.thrown;
-Temporary4 = colontmpD__4294969699;
+colontmpD__4294969698 = iterableHEX60gensym206_4294968713.thrown;
+Temporary4 = colontmpD__4294969698;
 }
 else {
-colontmpD__4294969700 = false;
-Temporary4 = colontmpD__4294969700;
+colontmpD__4294969699 = false;
+Temporary4 = colontmpD__4294969699;
 }
 
 if (Temporary4) {
@@ -22154,20 +22151,20 @@ break BeforeRet;
 Label5: {
 Label6: while (true) {
 if (!true) break Label6;
+var colontmpD__4294969700 = false;
 var colontmpD__4294969701 = false;
-var colontmpD__4294969702 = false;
 var it_4294968715 = nextMethodHEX60gensym206_4294968714(iterableHEX60gensym206_4294968713);
 if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(it_4294968715)) {
 break Label5;
 }
 
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(it_4294968715)) {
-colontmpD__4294969701 = it_4294968715.thrown;
-Temporary7 = colontmpD__4294969701;
+colontmpD__4294969700 = it_4294968715.thrown;
+Temporary7 = colontmpD__4294969700;
 }
 else {
-colontmpD__4294969702 = false;
-Temporary7 = colontmpD__4294969702;
+colontmpD__4294969701 = false;
+Temporary7 = colontmpD__4294969701;
 }
 
 if (Temporary7) {
@@ -22181,49 +22178,49 @@ ls_4294968672.push(it_4294968715);;
 HEX5BHEX5DHEX3D__OOZ79bjectsZlistobject_u1424(self_4294968640, nslice_4294968670[0], ls_4294968672);
 }
 else {
+var colontmpD__4294969703 = false;
 var colontmpD__4294969704 = false;
-var colontmpD__4294969705 = false;
 var retTupleHEX60gensym224_4294968802 = {Field0: null, Field1: null};
 Label8: {
 var iterFuncHEX60gensym224_4294968804 = iterableToLoop_4294968664.pybase_head.pyType.magicMethods.Field60;
 if ((iterFuncHEX60gensym224_4294968804 == null)) {
 var msgHEX60gensym224_4294968808 = (iterableToLoop_4294968664.pybase_head.pyType.name).concat([32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);
-var colontmp__4294969663 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym224_4294968808, false));
-var colontmp__4294969664 = null;
-retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969663, Field1: colontmp__4294969664}, NTI4294968087);
+var colontmp__4294969662 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym224_4294968808, false));
+var colontmp__4294969663 = null;
+retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969662, Field1: colontmp__4294969663}, NTI4294968087);
 break Label8;
 }
 
 var iterObjHEX60gensym224_4294968815 = iterFuncHEX60gensym224_4294968804(iterableToLoop_4294968664);
 var iternextFuncHEX60gensym224_4294968816 = iterObjHEX60gensym224_4294968815.pybase_head.pyType.magicMethods.Field61;
 if ((iternextFuncHEX60gensym224_4294968816 == null)) {
-var colontmpD__4294969703 = [];
+var colontmpD__4294969702 = [];
 Label9: {
 var fmtRes_4294968824 = mnewString(0);
 fmtRes_4294968824.push.apply(fmtRes_4294968824, [105,116,101,114,40,41,32,114,101,116,117,114,110,101,100,32,110,111,110,45,105,116,101,114,97,116,111,114,32,111,102,32,116,121,112,101,32]);;
-colontmpD__4294969703 = fmtRes_4294968824;
+colontmpD__4294969702 = fmtRes_4294968824;
 };
-var msgHEX60gensym224_4294968825 = (colontmpD__4294969703).concat(iterObjHEX60gensym224_4294968815.pybase_head.pyType.name);
-var colontmp__4294969666 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym224_4294968825, false));
-var colontmp__4294969667 = null;
-retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969666, Field1: colontmp__4294969667}, NTI4294968087);
+var msgHEX60gensym224_4294968825 = (colontmpD__4294969702).concat(iterObjHEX60gensym224_4294968815.pybase_head.pyType.name);
+var colontmp__4294969665 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msgHEX60gensym224_4294968825, false));
+var colontmp__4294969666 = null;
+retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969665, Field1: colontmp__4294969666}, NTI4294968087);
 break Label8;
 }
 
-var colontmp__4294969668 = iterObjHEX60gensym224_4294968815;
-var colontmp__4294969669 = iternextFuncHEX60gensym224_4294968816;
-retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969668, Field1: colontmp__4294969669}, NTI4294968087);
+var colontmp__4294969667 = iterObjHEX60gensym224_4294968815;
+var colontmp__4294969668 = iternextFuncHEX60gensym224_4294968816;
+retTupleHEX60gensym224_4294968802 = nimCopy(retTupleHEX60gensym224_4294968802, {Field0: colontmp__4294969667, Field1: colontmp__4294969668}, NTI4294968087);
 };
 var tmpTuple_4294968832 = nimCopy(null, retTupleHEX60gensym224_4294968802, NTI2969567260);
 var iterable_4294968833 = tmpTuple_4294968832["Field0"];
 var nextMethod_4294968834 = tmpTuple_4294968832["Field1"];
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(iterable_4294968833)) {
-colontmpD__4294969704 = iterable_4294968833.thrown;
-Temporary10 = colontmpD__4294969704;
+colontmpD__4294969703 = iterable_4294968833.thrown;
+Temporary10 = colontmpD__4294969703;
 }
 else {
-colontmpD__4294969705 = false;
-Temporary10 = colontmpD__4294969705;
+colontmpD__4294969704 = false;
+Temporary10 = colontmpD__4294969704;
 }
 
 if (Temporary10) {
@@ -22233,37 +22230,37 @@ break BeforeRet;
 
 Label11: {
 var i_4294968835 = 0;
-var step_4294969681 = ind_4294968671.Field2;
-var start_4294969682 = ind_4294968671.Field0;
-var stop_4294969683 = ind_4294968671.Field1;
-var neg_4294969684 = (step_4294969681 < 0);
-if (neg_4294969684) {
+var step_4294969680 = ind_4294968671.Field2;
+var start_4294969681 = ind_4294968671.Field0;
+var stop_4294969682 = ind_4294968671.Field1;
+var neg_4294969683 = (step_4294969680 < 0);
+if (neg_4294969683) {
 Label12: {
-var i_4294969686 = 0;
+var i_4294969685 = 0;
+var colontmp__4294969686 = 0;
 var colontmp__4294969687 = 0;
-var colontmp__4294969688 = 0;
-colontmp__4294969687 = addInt(stop_4294969683, 1);
-colontmp__4294969688 = chckRange(step_4294969681, 1, 2147483647);
-var res_4294969689 = start_4294969682;
+colontmp__4294969686 = addInt(stop_4294969682, 1);
+colontmp__4294969687 = chckRange(step_4294969680, 1, 2147483647);
+var res_4294969688 = start_4294969681;
 Label13: {
 Label14: while (true) {
-if (!(colontmp__4294969687 <= res_4294969689)) break Label14;
+if (!(colontmp__4294969686 <= res_4294969688)) break Label14;
+var colontmpD__4294969705 = false;
 var colontmpD__4294969706 = false;
-var colontmpD__4294969707 = false;
-i_4294969686 = res_4294969689;
-i_4294968835 = i_4294969686;
+i_4294969685 = res_4294969688;
+i_4294968835 = i_4294969685;
 var it_4294968836 = nextMethod_4294968834(iterable_4294968833);
 if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(it_4294968836)) {
 break Label11;
 }
 
 if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(it_4294968836)) {
-colontmpD__4294969706 = it_4294968836.thrown;
-Temporary15 = colontmpD__4294969706;
+colontmpD__4294969705 = it_4294968836.thrown;
+Temporary15 = colontmpD__4294969705;
 }
 else {
-colontmpD__4294969707 = false;
-Temporary15 = colontmpD__4294969707;
+colontmpD__4294969706 = false;
+Temporary15 = colontmpD__4294969706;
 }
 
 if (Temporary15) {
@@ -22272,47 +22269,47 @@ break BeforeRet;
 }
 
 HEX5BHEX5DHEX3D__OOZ79bjectsZlistobject_u1315(self_4294968640, i_4294968835, it_4294968836);
-res_4294969689 = subInt(res_4294969689, colontmp__4294969688);
+res_4294969688 = subInt(res_4294969688, colontmp__4294969687);
 }
 };
 };
 }
 else {
 Label16: {
-var i_4294969692 = 0;
+var i_4294969691 = 0;
+var colontmp__4294969692 = 0;
 var colontmp__4294969693 = 0;
-var colontmp__4294969694 = 0;
-colontmp__4294969693 = subInt(stop_4294969683, 1);
-colontmp__4294969694 = chckRange(step_4294969681, 1, 2147483647);
-var res_4294969695 = start_4294969682;
+colontmp__4294969692 = subInt(stop_4294969682, 1);
+colontmp__4294969693 = chckRange(step_4294969680, 1, 2147483647);
+var res_4294969694 = start_4294969681;
 Label17: {
 Label18: while (true) {
-if (!(res_4294969695 <= colontmp__4294969693)) break Label18;
+if (!(res_4294969694 <= colontmp__4294969692)) break Label18;
+var colontmpD__4294969707 = false;
 var colontmpD__4294969708 = false;
-var colontmpD__4294969709 = false;
-i_4294969692 = res_4294969695;
-i_4294968835 = i_4294969692;
-var it_4294969697 = nextMethod_4294968834(iterable_4294968833);
-if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(it_4294969697)) {
+i_4294969691 = res_4294969694;
+i_4294968835 = i_4294969691;
+var it_4294969696 = nextMethod_4294968834(iterable_4294968833);
+if (isStopIter__OOZ79bjectsZexceptionsZbase_u6401(it_4294969696)) {
 break Label11;
 }
 
-if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(it_4294969697)) {
-colontmpD__4294969708 = it_4294969697.thrown;
-Temporary19 = colontmpD__4294969708;
+if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(it_4294969696)) {
+colontmpD__4294969707 = it_4294969696.thrown;
+Temporary19 = colontmpD__4294969707;
 }
 else {
-colontmpD__4294969709 = false;
-Temporary19 = colontmpD__4294969709;
+colontmpD__4294969708 = false;
+Temporary19 = colontmpD__4294969708;
 }
 
 if (Temporary19) {
-result_4294968628 = it_4294969697;
+result_4294968628 = it_4294969696;
 break BeforeRet;
 }
 
-HEX5BHEX5DHEX3D__OOZ79bjectsZlistobject_u1315(self_4294968640, i_4294968835, it_4294969697);
-res_4294969695 = addInt(res_4294969695, colontmp__4294969694);
+HEX5BHEX5DHEX3D__OOZ79bjectsZlistobject_u1315(self_4294968640, i_4294968835, it_4294969696);
+res_4294969694 = addInt(res_4294969694, colontmp__4294969693);
 }
 };
 };
@@ -22471,44 +22468,44 @@ delete__OOZ79bjectsZlistobject_u1631(self_4294968868, "items", nslice_4294968925
 else {
 Label2: {
 var i_4294968979 = 0;
-var step_4294969728 = ind_4294968926.Field2;
-var start_4294969729 = ind_4294968926.Field0;
-var stop_4294969730 = ind_4294968926.Field1;
-var neg_4294969731 = (step_4294969728 < 0);
-if (neg_4294969731) {
+var step_4294969727 = ind_4294968926.Field2;
+var start_4294969728 = ind_4294968926.Field0;
+var stop_4294969729 = ind_4294968926.Field1;
+var neg_4294969730 = (step_4294969727 < 0);
+if (neg_4294969730) {
 Label3: {
-var i_4294969733 = 0;
+var i_4294969732 = 0;
+var colontmp__4294969733 = 0;
 var colontmp__4294969734 = 0;
-var colontmp__4294969735 = 0;
-colontmp__4294969734 = addInt(stop_4294969730, 1);
-colontmp__4294969735 = chckRange(step_4294969728, 1, 2147483647);
-var res_4294969736 = start_4294969729;
+colontmp__4294969733 = addInt(stop_4294969729, 1);
+colontmp__4294969734 = chckRange(step_4294969727, 1, 2147483647);
+var res_4294969735 = start_4294969728;
 Label4: {
 Label5: while (true) {
-if (!(colontmp__4294969734 <= res_4294969736)) break Label5;
-i_4294969733 = res_4294969736;
-i_4294968979 = i_4294969733;
+if (!(colontmp__4294969733 <= res_4294969735)) break Label5;
+i_4294969732 = res_4294969735;
+i_4294968979 = i_4294969732;
 delete__OOZ79bjectsZlistobject_u1595(self_4294968868, "items", chckRange(i_4294968979, 0, 2147483647));
-res_4294969736 = subInt(res_4294969736, colontmp__4294969735);
+res_4294969735 = subInt(res_4294969735, colontmp__4294969734);
 }
 };
 };
 }
 else {
 Label6: {
-var i_4294969739 = 0;
+var i_4294969738 = 0;
+var colontmp__4294969739 = 0;
 var colontmp__4294969740 = 0;
-var colontmp__4294969741 = 0;
-colontmp__4294969740 = subInt(stop_4294969730, 1);
-colontmp__4294969741 = chckRange(step_4294969728, 1, 2147483647);
-var res_4294969742 = start_4294969729;
+colontmp__4294969739 = subInt(stop_4294969729, 1);
+colontmp__4294969740 = chckRange(step_4294969727, 1, 2147483647);
+var res_4294969741 = start_4294969728;
 Label7: {
 Label8: while (true) {
-if (!(res_4294969742 <= colontmp__4294969740)) break Label8;
-i_4294969739 = res_4294969742;
-i_4294968979 = i_4294969739;
+if (!(res_4294969741 <= colontmp__4294969739)) break Label8;
+i_4294969738 = res_4294969741;
+i_4294968979 = i_4294969738;
 delete__OOZ79bjectsZlistobject_u1595(self_4294968868, "items", chckRange(i_4294968979, 0, 2147483647));
-res_4294969742 = addInt(res_4294969742, colontmp__4294969741);
+res_4294969741 = addInt(res_4294969741, colontmp__4294969740);
 }
 };
 };
@@ -22645,9 +22642,9 @@ var y_4294969176 = last_p2;
 Label1: {
 Label2: while (true) {
 if (!(x_4294969175 < y_4294969176)) break Label2;
-var HEX3Atmp_4294969751 = a_p0[chckIndx(x_4294969175, 0, (a_p0).length - 1)];
+var HEX3Atmp_4294969750 = a_p0[chckIndx(x_4294969175, 0, (a_p0).length - 1)];
 a_p0[chckIndx(x_4294969175, 0, (a_p0).length - 1)] = a_p0[chckIndx(y_4294969176, 0, (a_p0).length - 1)];
-a_p0[chckIndx(y_4294969176, 0, (a_p0).length - 1)] = HEX3Atmp_4294969751;
+a_p0[chckIndx(y_4294969176, 0, (a_p0).length - 1)] = HEX3Atmp_4294969750;
 y_4294969176 = subInt(y_4294969176, 1);
 x_4294969175 = addInt(x_4294969175, 1);
 }
@@ -22850,7 +22847,7 @@ break BeforeRet;
 
 var tobjHEX60gensym329_4294969324 = args_p1[chckIndx(0, 0, (args_p1).length - 1)];
 if (!(isObj(tobjHEX60gensym329_4294969324.m_type, NTI3003121682))) {
-var colontmpD__4294969753 = [];
+var colontmpD__4294969752 = [];
 var expected_4294969331 = nimCopy(null, pyIntObjectType_3003121823.name, NTI33554449);
 var got_4294969332 = nimCopy(null, tobjHEX60gensym329_4294969324.pybase_head.pyType.name, NTI33554449);
 var tmsgInner_4294969333 = [32,102,111,114,105,110,115,101,114,116];
@@ -22862,9 +22859,9 @@ formatValue__OOZ79bjectsZpyobject_u404(fmtRes_4294969338, 0, tmsgInner_429496933
 fmtRes_4294969338[0].push.apply(fmtRes_4294969338[0], [32,40,103,111,116,32]);;
 formatValue__OOZ79bjectsZpyobject_u404(fmtRes_4294969338, 0, got_4294969332);
 fmtRes_4294969338[0].push.apply(fmtRes_4294969338[0], [41]);;
-colontmpD__4294969753 = fmtRes_4294969338[0];
+colontmpD__4294969752 = fmtRes_4294969338[0];
 };
-var msg_4294969354 = nimCopy(null, colontmpD__4294969753, NTI33554449);
+var msg_4294969354 = nimCopy(null, colontmpD__4294969752, NTI33554449);
 result_4294969301 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(msg_4294969354, false));
 break BeforeRet;
 }
@@ -49005,12 +49002,12 @@ return result_4932504906;
 
 }
 
-function PyErr_CreateException__OOZ79bjectsZexceptionsZextra95utils_u15(exception_type_p0, value_p1) {
+function PyErr_CreateException__OOZ79bjectsZexceptionsZextra95utils_u11(exception_type_p0, value_p1) {
 var Temporary1;
 var Temporary2;
 var Temporary3;
 
-var result_6090129426 = null;
+var result_6090129422 = null;
 
 BeforeRet: {
 var colontmpD__6073352908 = null;
@@ -49030,15 +49027,15 @@ colontmpD__6073352910 = call__call_u88(exception_type_p0, value_p1);
 Temporary1 = colontmpD__6073352910;
 }
 }
-var res_6090129430 = Temporary1;
-result_6090129426 = res_6090129430;
-if (!!((result_6090129426 == null))) Temporary2 = false; else {        Temporary2 = !(ofPyExceptionInstance__OOZ79bjectsZexceptions73mpl_u3400(result_6090129426));      }    if (Temporary2) {
+var res_6090129426 = Temporary1;
+result_6090129422 = res_6090129426;
+if (!!((result_6090129422 == null))) Temporary2 = false; else {        Temporary2 = !(ofPyExceptionInstance__OOZ79bjectsZexceptions73mpl_u3400(result_6090129422));      }    if (Temporary2) {
 var colontmpD__6073352911 = false;
 var colontmpD__6073352912 = false;
-var obj_exc_repr_6090129434 = PyObject_ReprNonNil__OOZ79bjectsZpyobject95apisZstrings_u29(exception_type_p0);
-var excHEX60gensym0_6090129436 = obj_exc_repr_6090129434;
-if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(excHEX60gensym0_6090129436)) {
-colontmpD__6073352911 = excHEX60gensym0_6090129436.thrown;
+var obj_exc_repr_6090129430 = PyObject_ReprNonNil__OOZ79bjectsZpyobject95apisZstrings_u29(exception_type_p0);
+var excHEX60gensym0_6090129432 = obj_exc_repr_6090129430;
+if (ofPyExceptionObject__OOZ79bjectsZexceptionsZbase_u728(excHEX60gensym0_6090129432)) {
+colontmpD__6073352911 = excHEX60gensym0_6090129432.thrown;
 Temporary3 = colontmpD__6073352911;
 }
 else {
@@ -49047,18 +49044,18 @@ Temporary3 = colontmpD__6073352912;
 }
 
 if (Temporary3) {
-result_6090129426 = excHEX60gensym0_6090129436;
+result_6090129422 = excHEX60gensym0_6090129432;
 break BeforeRet;
 }
 
-var exc_repr_6090129437 = obj_exc_repr_6090129434;
-var s_6090129438 = ([99,97,108,108,105,110,103,32]).concat(HEX24__OOZ79bjectsZstringobject_u19(exc_repr_6090129437.str),[115,104,111,117,108,100,32,104,97,118,101,32,114,101,116,117,114,110,101,100,32,97,110,32,105,110,115,116,97,110,99,101,32,111,102,32,66,97,115,101,69,120,99,101,112,116,105,111,110,44,32,110,111,116,32],result_6090129426.pybase_head.pyType.name);
-result_6090129426 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZstringobject_u990(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(s_6090129438, false)));
+var exc_repr_6090129433 = obj_exc_repr_6090129430;
+var s_6090129434 = ([99,97,108,108,105,110,103,32]).concat(HEX24__OOZ79bjectsZstringobject_u19(exc_repr_6090129433.str),[115,104,111,117,108,100,32,104,97,118,101,32,114,101,116,117,114,110,101,100,32,97,110,32,105,110,115,116,97,110,99,101,32,111,102,32,66,97,115,101,69,120,99,101,112,116,105,111,110,44,32,110,111,116,32],result_6090129422.pybase_head.pyType.name);
+result_6090129422 = newTypeError__OOZ79bjectsZexceptionsZbase_u6016(newPyString__OOZ79bjectsZstringobject_u990(newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(s_6090129434, false)));
 }
 
 };
 
-return result_6090129426;
+return result_6090129422;
 
 }
 
@@ -49066,7 +49063,7 @@ function exit__sysmodule_u532(status_p0) {
 var result_6073352726 = null;
 
 BeforeRet: {
-var res_6073352727 = PyErr_CreateException__OOZ79bjectsZexceptionsZextra95utils_u15(pySystemExitObjectType_2818577567, status_p0);
+var res_6073352727 = PyErr_CreateException__OOZ79bjectsZexceptionsZextra95utils_u11(pySystemExitObjectType_2818577567, status_p0);
 res_6073352727.thrown = true;
 result_6073352726 = res_6073352727;
 break BeforeRet;
@@ -84747,7 +84744,7 @@ result_p0[result_p0_Idx].push.apply(result_p0[result_p0_Idx], alignString__pureZ
 function Py_GetBuildInfo__OOZ77odulesZgetbuildinfo_u94() {
 var result_6375342175 = [];
 
-result_6375342175 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,52,56,56,56,97,97,102,44,32,50,48,50,53,45,49,50,45,50,57,44,32,49,52,58,49,49,58,53,49], NTI33554449);
+result_6375342175 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,54,98,57,52,51,101,48,44,32,50,48,50,53,45,49,50,45,50,57,44,32,49,52,58,51,52,58,49,56], NTI33554449);
 
 return result_6375342175;
 
@@ -84816,7 +84813,7 @@ return result_6375342169;
 function gitversion__OOZ77odulesZgetbuildinfo_u86() {
 var result_6375342167 = [];
 
-result_6375342167 = nimCopy(null, [52,56,56,56,97,97,102], NTI33554449);
+result_6375342167 = nimCopy(null, [54,98,57,52,51,101,48], NTI33554449);
 
 return result_6375342167;
 
