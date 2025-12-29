@@ -79467,7 +79467,7 @@ function readLineCompat__OOZ85tilsZcompat_u24(prompt_p0) {
 var result_2164260890 = [];
 
 if (true) {
-failedAssertImpl__stdZassertions_u84([99,111,109,112,97,116,46,110,105,109,40,49,53,57,44,32,53,50,41,32,96,102,97,108,115,101,96,32,110,111,116,32,105,109,112,108,32,105,110,32,106,115,32,107,97,114,97,120,32,98,97,99,107,101,110,100]);
+failedAssertImpl__stdZassertions_u84([99,111,109,112,97,116,46,110,105,109,40,49,54,48,44,32,53,50,41,32,96,102,97,108,115,101,96,32,110,111,116,32,105,109,112,108,32,105,110,32,106,115,32,107,97,114,97,120,32,98,97,99,107,101,110,100]);
 }
 
 
@@ -84747,7 +84747,7 @@ result_p0[result_p0_Idx].push.apply(result_p0[result_p0_Idx], alignString__pureZ
 function Py_GetBuildInfo__OOZ77odulesZgetbuildinfo_u94() {
 var result_6375342175 = [];
 
-result_6375342175 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,97,100,97,102,51,100,97,44,32,50,48,50,53,45,49,50,45,50,57,44,32,49,51,58,48,49,58,51,56], NTI33554449);
+result_6375342175 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,56,53,52,100,100,99,102,44,32,50,48,50,53,45,49,50,45,50,57,44,32,49,52,58,48,55,58,49,55], NTI33554449);
 
 return result_6375342175;
 
@@ -84816,7 +84816,7 @@ return result_6375342169;
 function gitversion__OOZ77odulesZgetbuildinfo_u86() {
 var result_6375342167 = [];
 
-result_6375342167 = nimCopy(null, [97,100,97,102,51,100,97], NTI33554449);
+result_6375342167 = nimCopy(null, [56,53,52,100,100,99,102], NTI33554449);
 
 return result_6375342167;
 
@@ -86097,50 +86097,43 @@ return result_6190792716;
 
 }
 
-function nosisAbsolute(path_p0) {
-var result_1157628017 = false;
+function isAbsoluteCompat__pkgZjscompatZos_u36(path_p0) {
+var result_2181038118 = false;
 
-BeforeRet: {
-if (((path_p0).length == 0)) {
-result_1157628017 = false;
-break BeforeRet;
-}
+result_2181038118 = path_isAbsolute_2181038110(toJSStr(path_p0));
 
-raiseAssert__stdZassertions_u42([117,110,114,101,97,99,104,97,98,108,101]);
-};
-
-return result_1157628017;
+return result_2181038118;
 
 }
 
-function absolutePath__stdZprivateZospaths2_u358(path_p0, root_p1) {
+function absolutePathCompat__pkgZjscompatZos_u39(path_p0, root_p1) {
 var Temporary1;
 
-var result_1157628265 = [];
+var result_2181038122 = [];
 
-if (nosisAbsolute(path_p0)) {
+if (isAbsoluteCompat__pkgZjscompatZos_u36(path_p0)) {
 Temporary1 = path_p0;
 }
 else {
-if (!(nosisAbsolute(root_p1))) {
+if (!(isAbsoluteCompat__pkgZjscompatZos_u36(root_p1))) {
 raiseException({message: ([84,104,101,32,115,112,101,99,105,102,105,101,100,32,114,111,111,116,32,105,115,32,110,111,116,32,97,98,115,111,108,117,116,101,58,32]).concat(root_p1), parent: null, m_type: NTI134217746, name: null, trace: [], up: null}, "ValueError");
 }
 
 Temporary1 = nosjoinPath(root_p1, path_p0);
 }
 
-result_1157628265 = nimCopy(null, Temporary1, NTI33554449);
+result_2181038122 = nimCopy(null, Temporary1, NTI33554449);
 
-return result_1157628265;
+return result_2181038122;
 
 }
 
-function nosgetCurrentDir() {
-var result_1157628261 = [];
+function getCurrentDirCompat__pkgZjscompatZos_u5() {
+var result_2181038086 = [];
 
-raiseAssert__stdZassertions_u42([117,115,101,32,45,100,58,110,111,100,101,106,115,32,116,111,32,104,97,118,101,32,96,103,101,116,67,117,114,114,101,110,116,68,105,114,96,32,100,101,102,105,110,101,100]);
+result_2181038086 = nimCopy(null, cstrToNimstr(process.cwd()), NTI33554449);
 
-return result_1157628261;
+return result_2181038086;
 
 }
 
@@ -86307,7 +86300,7 @@ if (((args_p0).length == 0)) {
 add__OOZ79bjectsZlistobject_u1198(sys_5620367362[0].path, newPyAscii__OOZ79bjectsZstringobject_u1005());
 }
 else {
-var filepath_5184159866 = absolutePath__stdZprivateZospaths2_u358(args_p0[chckIndx(0, 0, (args_p0).length - 1)], nosgetCurrentDir());
+var filepath_5184159866 = absolutePathCompat__pkgZjscompatZos_u39(args_p0[chckIndx(0, 0, (args_p0).length - 1)], getCurrentDirCompat__pkgZjscompatZos_u5());
 pyConfig_1493172242[0].run_filename = nimCopy(null, filepath_5184159866, NTI33554449);
 pyConfig_1493172242[0].filename = nimCopy(null, nosextractFilename(filepath_5184159866), NTI33554449);
 var s_5184159873 = newPyString__OOZ79bjectsZexceptionsZbaseapi_u108(nosparentDir(filepath_5184159866), false);
