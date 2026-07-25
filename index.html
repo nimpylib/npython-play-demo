@@ -20484,11 +20484,9 @@ var Temporary3;
 var Temporary7;
 var Temporary8;
 var Temporary9;
-var Temporary10;
+var Temporary13;
 var Temporary14;
 var Temporary15;
-var Temporary16;
-var Temporary17;
 
 var result_3539992672 = [({pri_sign: 0, pri_digits: []})];
 
@@ -20517,31 +20515,29 @@ Label5: {
 Label6: while (true) {
 if (!(i_5771363077 < sizeB_3539992683)) break Label6;
 i_3539992700 = i_5771363077;
-var subtrahend_3539992701 = ((((Temporary7 = digits__pkgZintobjectZdecl95private_u79(smaller_3539992675[0]), Temporary7)[0][Temporary7[1]][chckIndx(i_3539992700, 0, (Temporary7[0][Temporary7[1]]).length - 1)] >>> 0) + borrow_3539992673) >>> 0);
-var diff_3539992702 = ((((Temporary8 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary8)[0][Temporary8[1]][chckIndx(i_3539992700, 0, (Temporary8[0][Temporary8[1]]).length - 1)] >>> 0) - subtrahend_3539992701) >>> 0);
-(Temporary9 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary9)[0][Temporary9[1]][chckIndx(i_3539992700, 0, (Temporary9[0][Temporary9[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((diff_3539992702 & 65535) >>> 0))));
-borrow_3539992673 = (((Temporary10 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary10)[0][Temporary10[1]][chckIndx(i_3539992700, 0, (Temporary10[0][Temporary10[1]]).length - 1)] >>> 0) < subtrahend_3539992701);
+var diff_3539992701 = ((((((Temporary7 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary7)[0][Temporary7[1]][chckIndx(i_3539992700, 0, (Temporary7[0][Temporary7[1]]).length - 1)] >>> 0) - ((Temporary8 = digits__pkgZintobjectZdecl95private_u79(smaller_3539992675[0]), Temporary8)[0][Temporary8[1]][chckIndx(i_3539992700, 0, (Temporary8[0][Temporary8[1]]).length - 1)] >>> 0)) >>> 0) - borrow_3539992673) >>> 0);
+(Temporary9 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary9)[0][Temporary9[1]][chckIndx(i_3539992700, 0, (Temporary9[0][Temporary9[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((diff_3539992701 & 65535) >>> 0))));
+borrow_3539992673 = (diff_3539992701 < 0);
 i_5771363077 = addInt(i_5771363077, 1);
 }
 };
 };
-Label11: {
-var i_3539992709 = 0;
+Label10: {
+var i_3539992708 = 0;
 var i_5771363080 = sizeB_3539992683;
-Label12: {
-Label13: while (true) {
-if (!(i_5771363080 < sizeA_3539992679)) break Label13;
-i_3539992709 = i_5771363080;
-var subtrahend_3539992710 = borrow_3539992673;
-var diff_3539992711 = ((((Temporary14 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary14)[0][Temporary14[1]][chckIndx(i_3539992709, 0, (Temporary14[0][Temporary14[1]]).length - 1)] >>> 0) - subtrahend_3539992710) >>> 0);
-(Temporary15 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary15)[0][Temporary15[1]][chckIndx(i_3539992709, 0, (Temporary15[0][Temporary15[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((diff_3539992711 & 65535) >>> 0))));
-borrow_3539992673 = (((Temporary16 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary16)[0][Temporary16[1]][chckIndx(i_3539992709, 0, (Temporary16[0][Temporary16[1]]).length - 1)] >>> 0) < subtrahend_3539992710);
+Label11: {
+Label12: while (true) {
+if (!(i_5771363080 < sizeA_3539992679)) break Label12;
+i_3539992708 = i_5771363080;
+var diff_3539992709 = ((((Temporary13 = digits__pkgZintobjectZdecl95private_u79(larger_3539992674[0]), Temporary13)[0][Temporary13[1]][chckIndx(i_3539992708, 0, (Temporary13[0][Temporary13[1]]).length - 1)] >>> 0) - borrow_3539992673) >>> 0);
+(Temporary14 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary14)[0][Temporary14[1]][chckIndx(i_3539992708, 0, (Temporary14[0][Temporary14[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((diff_3539992709 & 65535) >>> 0))));
+borrow_3539992673 = (diff_3539992709 < 0);
 i_5771363080 = addInt(i_5771363080, 1);
 }
 };
 };
 normalize__pkgZintobjectZutils_u31(result_3539992672[0]);
-if ((((Temporary17 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary17)[0][Temporary17[1]]).length == 0)) {
+if ((((Temporary15 = digits__pkgZintobjectZdecl95private_u79(result_3539992672[0]), Temporary15)[0][Temporary15[1]]).length == 0)) {
 signHEX3D__pkgZintobjectZdecl95private_u98(result_3539992672[0], 0);
 }
 
@@ -20550,45 +20546,45 @@ return result_3539992672[0];
 
 }
 
-function HEX2B__pkgZintobjectZops95basic95arith_u477(a_p0, b_p1) {
-var result_3539993056 = [({pri_sign: 0, pri_digits: []})];
+function HEX2B__pkgZintobjectZops95basic95arith_u475(a_p0, b_p1) {
+var result_3539993054 = [({pri_sign: 0, pri_digits: []})];
 
 BeforeRet: {
 switch (sign__pkgZintobjectZdecl95private_u22(a_p0)) {
 case (-1):
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993056[0] = nimCopy(result_3539993056[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993056[0], (-1));
+result_3539993054[0] = nimCopy(result_3539993054[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993054[0], (-1));
 break BeforeRet;
 break;
 case 0:
-result_3539993056[0] = nimCopy(result_3539993056[0], a_p0, NTI3154116627);
+result_3539993054[0] = nimCopy(result_3539993054[0], a_p0, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993056[0] = nimCopy(result_3539993056[0], doSub__pkgZintobjectZops95basic95arith_u93(b_p1, a_p0), NTI3154116627);
+result_3539993054[0] = nimCopy(result_3539993054[0], doSub__pkgZintobjectZops95basic95arith_u93(b_p1, a_p0), NTI3154116627);
 break BeforeRet;
 break;
 }
 break;
 case 0:
-result_3539993056[0] = nimCopy(result_3539993056[0], b_p1, NTI3154116627);
+result_3539993054[0] = nimCopy(result_3539993054[0], b_p1, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993056[0] = nimCopy(result_3539993056[0], doSub__pkgZintobjectZops95basic95arith_u93(a_p0, b_p1), NTI3154116627);
+result_3539993054[0] = nimCopy(result_3539993054[0], doSub__pkgZintobjectZops95basic95arith_u93(a_p0, b_p1), NTI3154116627);
 break BeforeRet;
 break;
 case 0:
-result_3539993056[0] = nimCopy(result_3539993056[0], a_p0, NTI3154116627);
+result_3539993054[0] = nimCopy(result_3539993054[0], a_p0, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993056[0] = nimCopy(result_3539993056[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993056[0], 1);
+result_3539993054[0] = nimCopy(result_3539993054[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993054[0], 1);
 break BeforeRet;
 break;
 }
@@ -20596,14 +20592,14 @@ break;
 }
 };
 
-return result_3539993056[0];
+return result_3539993054[0];
 
 }
 
 function HEX2B__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u13(a_p0, b_p1) {
 var result_4831838224 = null;
 
-result_4831838224 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2B__pkgZintobjectZops95basic95arith_u477(a_p0.v, b_p1.v));
+result_4831838224 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2B__pkgZintobjectZops95basic95arith_u475(a_p0.v, b_p1.v));
 
 return result_4831838224;
 
@@ -27900,37 +27896,37 @@ return result_5754586991;
 
 }
 
-function HEX3C__pkgZintobjectZops95basic95arith_u445(a_p0, b_p1) {
-var result_3539993024 = false;
+function HEX3C__pkgZintobjectZops95basic95arith_u443(a_p0, b_p1) {
+var result_3539993022 = false;
 
 BeforeRet: {
 switch (sign__pkgZintobjectZdecl95private_u22(a_p0)) {
 case (-1):
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993024 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == 1);
+result_3539993022 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == 1);
 break BeforeRet;
 break;
 case 0:
 case 1:
-result_3539993024 = true;
+result_3539993022 = true;
 break BeforeRet;
 break;
 }
 break;
 case 0:
-result_3539993024 = (sign__pkgZintobjectZdecl95private_u22(b_p1) == 1);
+result_3539993022 = (sign__pkgZintobjectZdecl95private_u22(b_p1) == 1);
 break BeforeRet;
 break;
 case 1:
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
 case 0:
-result_3539993024 = false;
+result_3539993022 = false;
 break BeforeRet;
 break;
 case 1:
-result_3539993024 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == (-1));
+result_3539993022 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == (-1));
 break BeforeRet;
 break;
 }
@@ -27938,14 +27934,14 @@ break;
 }
 };
 
-return result_3539993024;
+return result_3539993022;
 
 }
 
 function HEX3C__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u5(a_p0, b_p1) {
 var result_4831838216 = false;
 
-result_4831838216 = HEX3C__pkgZintobjectZops95basic95arith_u445(a_p0.v, b_p1.v);
+result_4831838216 = HEX3C__pkgZintobjectZops95basic95arith_u443(a_p0.v, b_p1.v);
 
 return result_4831838216;
 
@@ -34913,24 +34909,24 @@ return result_6190792815;
 
 }
 
-function HEX2D__pkgZintobjectZops95basic95arith_u481(a_p0, b_p1) {
-var result_3539993060 = [({pri_sign: 0, pri_digits: []})];
+function HEX2D__pkgZintobjectZops95basic95arith_u479(a_p0, b_p1) {
+var result_3539993058 = [({pri_sign: 0, pri_digits: []})];
 
 BeforeRet: {
 switch (sign__pkgZintobjectZdecl95private_u22(a_p0)) {
 case (-1):
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993060[0] = nimCopy(result_3539993060[0], doSub__pkgZintobjectZops95basic95arith_u93(b_p1, a_p0), NTI3154116627);
+result_3539993058[0] = nimCopy(result_3539993058[0], doSub__pkgZintobjectZops95basic95arith_u93(b_p1, a_p0), NTI3154116627);
 break BeforeRet;
 break;
 case 0:
-result_3539993060[0] = nimCopy(result_3539993060[0], a_p0, NTI3154116627);
+result_3539993058[0] = nimCopy(result_3539993058[0], a_p0, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993060[0] = nimCopy(result_3539993060[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993060[0], (-1));
+result_3539993058[0] = nimCopy(result_3539993058[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993058[0], (-1));
 break BeforeRet;
 break;
 }
@@ -34938,17 +34934,17 @@ break;
 case 0:
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993060[0] = nimCopy(result_3539993060[0], copyOnlyDigits__pkgZintobjectZutils_u28(b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993060[0], 1);
+result_3539993058[0] = nimCopy(result_3539993058[0], copyOnlyDigits__pkgZintobjectZutils_u28(b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993058[0], 1);
 break BeforeRet;
 break;
 case 0:
-result_3539993060[0] = nimCopy(result_3539993060[0], a_p0, NTI3154116627);
+result_3539993058[0] = nimCopy(result_3539993058[0], a_p0, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993060[0] = nimCopy(result_3539993060[0], copyOnlyDigits__pkgZintobjectZutils_u28(b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993060[0], (-1));
+result_3539993058[0] = nimCopy(result_3539993058[0], copyOnlyDigits__pkgZintobjectZutils_u28(b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993058[0], (-1));
 break BeforeRet;
 break;
 }
@@ -34956,16 +34952,16 @@ break;
 case 1:
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993060[0] = nimCopy(result_3539993060[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993060[0], 1);
+result_3539993058[0] = nimCopy(result_3539993058[0], doAdd__pkgZintobjectZops95basic95arith_u51(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993058[0], 1);
 break BeforeRet;
 break;
 case 0:
-result_3539993060[0] = nimCopy(result_3539993060[0], a_p0, NTI3154116627);
+result_3539993058[0] = nimCopy(result_3539993058[0], a_p0, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993060[0] = nimCopy(result_3539993060[0], doSub__pkgZintobjectZops95basic95arith_u93(a_p0, b_p1), NTI3154116627);
+result_3539993058[0] = nimCopy(result_3539993058[0], doSub__pkgZintobjectZops95basic95arith_u93(a_p0, b_p1), NTI3154116627);
 break BeforeRet;
 break;
 }
@@ -34973,14 +34969,14 @@ break;
 }
 };
 
-return result_3539993060[0];
+return result_3539993058[0];
 
 }
 
 function HEX2D__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u17(a_p0, b_p1) {
 var result_4831838228 = null;
 
-result_4831838228 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2D__pkgZintobjectZops95basic95arith_u481(a_p0.v, b_p1.v));
+result_4831838228 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2D__pkgZintobjectZops95basic95arith_u479(a_p0.v, b_p1.v));
 
 return result_4831838228;
 
@@ -35003,122 +34999,122 @@ return result_6190792820;
 
 }
 
-function doMul__pkgZintobjectZops95basic95arith_u141(a_p0, b_p1) {
+function doMul__pkgZintobjectZops95basic95arith_u139(a_p0, b_p1) {
 var Temporary4;
 var Temporary5;
 var Temporary6;
 
-var result_3539992720 = [({pri_sign: 0, pri_digits: []})];
+var result_3539992718 = [({pri_sign: 0, pri_digits: []})];
 
-result_3539992720[0] = nimCopy(result_3539992720[0], newIntOfLen__pkgZintobjectZutils_u3((digits__pkgZintobjectZdecl95private_u41(a_p0)).length), NTI3154116627);
-var carryHEX60gensym6_3539992726 = 0;
-var tbHEX60gensym6_3539992727 = (b_p1 >>> 0);
+result_3539992718[0] = nimCopy(result_3539992718[0], newIntOfLen__pkgZintobjectZutils_u3((digits__pkgZintobjectZdecl95private_u41(a_p0)).length), NTI3154116627);
+var carryHEX60gensym6_3539992724 = 0;
+var tbHEX60gensym6_3539992725 = (b_p1 >>> 0);
 Label1: {
-var i_3539992735 = 0;
+var i_3539992733 = 0;
 var colontmp__6190794034 = 0;
 colontmp__6190794034 = (digits__pkgZintobjectZdecl95private_u41(a_p0)).length;
 var i_6190794035 = 0;
 Label2: {
 Label3: while (true) {
 if (!(i_6190794035 < colontmp__6190794034)) break Label3;
-i_3539992735 = i_6190794035;
-carryHEX60gensym6_3539992726 = ((carryHEX60gensym6_3539992726 + ((((Temporary4 = digits__pkgZintobjectZdecl95private_u41(a_p0), Temporary4)[chckIndx(i_3539992735, 0, (Temporary4).length - 1)] >>> 0) * tbHEX60gensym6_3539992727) >>> 0)) >>> 0);
-(Temporary5 = digits__pkgZintobjectZdecl95private_u79(result_3539992720[0]), Temporary5)[0][Temporary5[1]][chckIndx(i_3539992735, 0, (Temporary5[0][Temporary5[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((carryHEX60gensym6_3539992726 & 65535) >>> 0))));
-carryHEX60gensym6_3539992726 = (Number(BigInt.asUintN(16, BigInt((carryHEX60gensym6_3539992726 >>> (16 & 31))))) >>> 0);
+i_3539992733 = i_6190794035;
+carryHEX60gensym6_3539992724 = ((carryHEX60gensym6_3539992724 + ((((Temporary4 = digits__pkgZintobjectZdecl95private_u41(a_p0), Temporary4)[chckIndx(i_3539992733, 0, (Temporary4).length - 1)] >>> 0) * tbHEX60gensym6_3539992725) >>> 0)) >>> 0);
+(Temporary5 = digits__pkgZintobjectZdecl95private_u79(result_3539992718[0]), Temporary5)[0][Temporary5[1]][chckIndx(i_3539992733, 0, (Temporary5[0][Temporary5[1]]).length - 1)] = Number(BigInt.asUintN(16, BigInt(((carryHEX60gensym6_3539992724 & 65535) >>> 0))));
+carryHEX60gensym6_3539992724 = (Number(BigInt.asUintN(16, BigInt((carryHEX60gensym6_3539992724 >>> (16 & 31))))) >>> 0);
 i_6190794035 = addInt(i_6190794035, 1);
 }
 };
 };
-if ((0n < BigInt(carryHEX60gensym6_3539992726))) {
-(Temporary6 = digits__pkgZintobjectZdecl95private_u79(result_3539992720[0]), Temporary6)[0][Temporary6[1]].push(Number(BigInt.asUintN(16, BigInt(((carryHEX60gensym6_3539992726 & 65535) >>> 0)))));;
+if ((0n < BigInt(carryHEX60gensym6_3539992724))) {
+(Temporary6 = digits__pkgZintobjectZdecl95private_u79(result_3539992718[0]), Temporary6)[0][Temporary6[1]].push(Number(BigInt.asUintN(16, BigInt(((carryHEX60gensym6_3539992724 & 65535) >>> 0)))));;
 }
 
 
-return result_3539992720[0];
+return result_3539992718[0];
 
 }
 
-function newSeq__pkgZintobjectZops95basic95arith_u246(len_p0) {
-var result_3539992826 = [];
+function newSeq__pkgZintobjectZops95basic95arith_u244(len_p0) {
+var result_3539992824 = [];
 
-result_3539992826 = new Array(len_p0); for (var i = 0 ; i < len_p0 ; ++i) { result_3539992826[i] = 0; }
-return result_3539992826;
+result_3539992824 = new Array(len_p0); for (var i = 0 ; i < len_p0 ; ++i) { result_3539992824[i] = 0; }
+return result_3539992824;
 
 }
 
-function HEX26__pkgZintobjectZops95basic95arith_u256(x_p0, y_p1) {
-var result_3539992836 = [];
+function HEX26__pkgZintobjectZops95basic95arith_u254(x_p0, y_p1) {
+var result_3539992834 = [];
 
-result_3539992836 = new Array(chckRange(addInt((x_p0).length, (y_p1).length), 0, 2147483647)); for (var i = 0 ; i < chckRange(addInt((x_p0).length, (y_p1).length), 0, 2147483647) ; ++i) { result_3539992836[i] = 0; }    Label1: {
-var i_3539992854 = 0;
+result_3539992834 = new Array(chckRange(addInt((x_p0).length, (y_p1).length), 0, 2147483647)); for (var i = 0 ; i < chckRange(addInt((x_p0).length, (y_p1).length), 0, 2147483647) ; ++i) { result_3539992834[i] = 0; }    Label1: {
+var i_3539992852 = 0;
 var colontmp__6190794038 = 0;
 colontmp__6190794038 = subInt((x_p0).length, 1);
 var res_6190794039 = 0;
 Label2: {
 Label3: while (true) {
 if (!(res_6190794039 <= colontmp__6190794038)) break Label3;
-i_3539992854 = res_6190794039;
-result_3539992836[chckIndx(i_3539992854, 0, (result_3539992836).length - 1)] = x_p0[chckIndx(i_3539992854, 0, (x_p0).length - 1)];
+i_3539992852 = res_6190794039;
+result_3539992834[chckIndx(i_3539992852, 0, (result_3539992834).length - 1)] = x_p0[chckIndx(i_3539992852, 0, (x_p0).length - 1)];
 res_6190794039 = addInt(res_6190794039, 1);
 }
 };
 };
 Label4: {
-var i_3539992862 = 0;
+var i_3539992860 = 0;
 var colontmp__6190794042 = 0;
 colontmp__6190794042 = subInt((y_p1).length, 1);
 var res_6190794043 = 0;
 Label5: {
 Label6: while (true) {
 if (!(res_6190794043 <= colontmp__6190794042)) break Label6;
-i_3539992862 = res_6190794043;
-result_3539992836[chckIndx(addInt(i_3539992862, (x_p0).length), 0, (result_3539992836).length - 1)] = y_p1[chckIndx(i_3539992862, 0, (y_p1).length - 1)];
+i_3539992860 = res_6190794043;
+result_3539992834[chckIndx(addInt(i_3539992860, (x_p0).length), 0, (result_3539992834).length - 1)] = y_p1[chckIndx(i_3539992860, 0, (y_p1).length - 1)];
 res_6190794043 = addInt(res_6190794043, 1);
 }
 };
 };
 
-return result_3539992836;
+return result_3539992834;
 
 }
 
-function HEX5BHEX5D__pkgZintobjectZops95basic95arith_u303(s_p0, x_p1) {
-var result_3539992885 = [];
+function HEX5BHEX5D__pkgZintobjectZops95basic95arith_u301(s_p0, x_p1) {
+var result_3539992883 = [];
 
-var a_3539992887 = x_p1.a;
-var L_3539992893 = addInt(subInt(subInt((s_p0).length, x_p1.b), a_3539992887), 1);
-result_3539992885 = new Array(chckRange(L_3539992893, 0, 2147483647)); for (var i = 0 ; i < chckRange(L_3539992893, 0, 2147483647) ; ++i) { result_3539992885[i] = ({pri_sign: 0, pri_digits: []}); }    Label1: {
-var i_3539992902 = 0;
+var a_3539992885 = x_p1.a;
+var L_3539992891 = addInt(subInt(subInt((s_p0).length, x_p1.b), a_3539992885), 1);
+result_3539992883 = new Array(chckRange(L_3539992891, 0, 2147483647)); for (var i = 0 ; i < chckRange(L_3539992891, 0, 2147483647) ; ++i) { result_3539992883[i] = ({pri_sign: 0, pri_digits: []}); }    Label1: {
+var i_3539992900 = 0;
 var i_6190794046 = 0;
 Label2: {
 Label3: while (true) {
-if (!(i_6190794046 < L_3539992893)) break Label3;
-i_3539992902 = i_6190794046;
-result_3539992885[chckIndx(i_3539992902, 0, (result_3539992885).length - 1)] = nimCopy(result_3539992885[chckIndx(i_3539992902, 0, (result_3539992885).length - 1)], s_p0[chckIndx(addInt(i_3539992902, a_3539992887), 0, (s_p0).length - 1)], NTI3154116627);
+if (!(i_6190794046 < L_3539992891)) break Label3;
+i_3539992900 = i_6190794046;
+result_3539992883[chckIndx(i_3539992900, 0, (result_3539992883).length - 1)] = nimCopy(result_3539992883[chckIndx(i_3539992900, 0, (result_3539992883).length - 1)], s_p0[chckIndx(addInt(i_3539992900, a_3539992885), 0, (s_p0).length - 1)], NTI3154116627);
 i_6190794046 = addInt(i_6190794046, 1);
 }
 };
 };
 
-return result_3539992885;
+return result_3539992883;
 
 }
 
-function doMul__pkgZintobjectZops95basic95arith_u176(a_p0, b_p1) {
+function doMul__pkgZintobjectZops95basic95arith_u174(a_p0, b_p1) {
 var Temporary4;
 
-var result_3539992755 = ({pri_sign: 0, pri_digits: []});
+var result_3539992753 = ({pri_sign: 0, pri_digits: []});
 
 BeforeRet: {
 if (((digits__pkgZintobjectZdecl95private_u41(a_p0)).length < (digits__pkgZintobjectZdecl95private_u41(b_p1)).length)) {
-result_3539992755 = nimCopy(result_3539992755, doMul__pkgZintobjectZops95basic95arith_u176(b_p1, a_p0), NTI3154116627);
+result_3539992753 = nimCopy(result_3539992753, doMul__pkgZintobjectZops95basic95arith_u174(b_p1, a_p0), NTI3154116627);
 break BeforeRet;
 }
 
-var ints_3539992762 = [];
+var ints_3539992760 = [];
 Label1: {
-var i_3539992803 = 0;
-var db_3539992804 = 0;
+var i_3539992801 = 0;
+var db_3539992802 = 0;
 var colontmp__6190794022 = [];
 colontmp__6190794022 = digits__pkgZintobjectZdecl95private_u41(b_p1);
 var i_6190794024 = 0;
@@ -35126,13 +35122,13 @@ var L_6190794025 = (colontmp__6190794022).length;
 Label2: {
 Label3: while (true) {
 if (!(i_6190794024 < L_6190794025)) break Label3;
-i_3539992803 = i_6190794024;
-db_3539992804 = colontmp__6190794022[chckIndx(i_6190794024, 0, (colontmp__6190794022).length - 1)];
-var c_3539992805 = [doMul__pkgZintobjectZops95basic95arith_u141(a_p0, db_3539992804)];
-var zeros_3539992831 = newSeq__pkgZintobjectZops95basic95arith_u246(chckRange(i_3539992803, 0, 2147483647));
-digitsHEX3D__pkgZintobjectZdecl95private_u101(c_3539992805[0], HEX26__pkgZintobjectZops95basic95arith_u256(zeros_3539992831, (Temporary4 = digits__pkgZintobjectZdecl95private_u79(c_3539992805[0]), Temporary4)[0][Temporary4[1]]));
-var Temporary5 = nimCopy(null, c_3539992805[0], NTI3154116627);
-ints_3539992762.push(Temporary5);;
+i_3539992801 = i_6190794024;
+db_3539992802 = colontmp__6190794022[chckIndx(i_6190794024, 0, (colontmp__6190794022).length - 1)];
+var c_3539992803 = [doMul__pkgZintobjectZops95basic95arith_u139(a_p0, db_3539992802)];
+var zeros_3539992829 = newSeq__pkgZintobjectZops95basic95arith_u244(chckRange(i_3539992801, 0, 2147483647));
+digitsHEX3D__pkgZintobjectZdecl95private_u101(c_3539992803[0], HEX26__pkgZintobjectZops95basic95arith_u254(zeros_3539992829, (Temporary4 = digits__pkgZintobjectZdecl95private_u79(c_3539992803[0]), Temporary4)[0][Temporary4[1]]));
+var Temporary5 = nimCopy(null, c_3539992803[0], NTI3154116627);
+ints_3539992760.push(Temporary5);;
 i_6190794024 += 1;
 if (!(((colontmp__6190794022).length == L_6190794025))) {
 failedAssertImpl__stdZassertions_u86(makeNimstrLit("iterators.nim(187, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -35141,18 +35137,18 @@ failedAssertImpl__stdZassertions_u86(makeNimstrLit("iterators.nim(187, 11) `len(
 }
 };
 };
-result_3539992755 = nimCopy(result_3539992755, ints_3539992762[chckIndx(0, 0, (ints_3539992762).length - 1)], NTI3154116627);
+result_3539992753 = nimCopy(result_3539992753, ints_3539992760[chckIndx(0, 0, (ints_3539992760).length - 1)], NTI3154116627);
 Label6: {
-var intObj_3539992941 = ({pri_sign: 0, pri_digits: []});
+var intObj_3539992939 = ({pri_sign: 0, pri_digits: []});
 var colontmp__6190794028 = [];
-colontmp__6190794028 = HEX5BHEX5D__pkgZintobjectZops95basic95arith_u303(ints_3539992762, HEX2EHEX2E__stdZenumutils_u105(1, 1));
+colontmp__6190794028 = HEX5BHEX5D__pkgZintobjectZops95basic95arith_u301(ints_3539992760, HEX2EHEX2E__stdZenumutils_u105(1, 1));
 var i_6190794030 = 0;
 var L_6190794031 = (colontmp__6190794028).length;
 Label7: {
 Label8: while (true) {
 if (!(i_6190794030 < L_6190794031)) break Label8;
-intObj_3539992941 = colontmp__6190794028[chckIndx(i_6190794030, 0, (colontmp__6190794028).length - 1)];
-result_3539992755 = nimCopy(result_3539992755, doAdd__pkgZintobjectZops95basic95arith_u51(result_3539992755, intObj_3539992941), NTI3154116627);
+intObj_3539992939 = colontmp__6190794028[chckIndx(i_6190794030, 0, (colontmp__6190794028).length - 1)];
+result_3539992753 = nimCopy(result_3539992753, doAdd__pkgZintobjectZops95basic95arith_u51(result_3539992753, intObj_3539992939), NTI3154116627);
 i_6190794030 += 1;
 if (!(((colontmp__6190794028).length == L_6190794031))) {
 failedAssertImpl__stdZassertions_u86(makeNimstrLit("iterators.nim(254, 11) `len(a) == L` the length of the seq changed while iterating over it"));
@@ -35163,51 +35159,51 @@ failedAssertImpl__stdZassertions_u86(makeNimstrLit("iterators.nim(254, 11) `len(
 };
 };
 
-return result_3539992755;
+return result_3539992753;
 
 }
 
-function HEX2A__pkgZintobjectZops95basic95arith_u491(a_p0, b_p1) {
-var result_3539993070 = [({pri_sign: 0, pri_digits: []})];
+function HEX2A__pkgZintobjectZops95basic95arith_u489(a_p0, b_p1) {
+var result_3539993068 = [({pri_sign: 0, pri_digits: []})];
 
 BeforeRet: {
 switch (sign__pkgZintobjectZdecl95private_u22(a_p0)) {
 case (-1):
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993070[0] = nimCopy(result_3539993070[0], doMul__pkgZintobjectZops95basic95arith_u176(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993070[0], 1);
+result_3539993068[0] = nimCopy(result_3539993068[0], doMul__pkgZintobjectZops95basic95arith_u174(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993068[0], 1);
 break BeforeRet;
 break;
 case 0:
-result_3539993070[0] = nimCopy(result_3539993070[0], intZero_3539992586, NTI3154116627);
+result_3539993068[0] = nimCopy(result_3539993068[0], intZero_3539992586, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993070[0] = nimCopy(result_3539993070[0], doMul__pkgZintobjectZops95basic95arith_u176(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993070[0], (-1));
+result_3539993068[0] = nimCopy(result_3539993068[0], doMul__pkgZintobjectZops95basic95arith_u174(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993068[0], (-1));
 break BeforeRet;
 break;
 }
 break;
 case 0:
-result_3539993070[0] = nimCopy(result_3539993070[0], intZero_3539992586, NTI3154116627);
+result_3539993068[0] = nimCopy(result_3539993068[0], intZero_3539992586, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
 switch (sign__pkgZintobjectZdecl95private_u22(b_p1)) {
 case (-1):
-result_3539993070[0] = nimCopy(result_3539993070[0], doMul__pkgZintobjectZops95basic95arith_u176(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993070[0], (-1));
+result_3539993068[0] = nimCopy(result_3539993068[0], doMul__pkgZintobjectZops95basic95arith_u174(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993068[0], (-1));
 break BeforeRet;
 break;
 case 0:
-result_3539993070[0] = nimCopy(result_3539993070[0], intZero_3539992586, NTI3154116627);
+result_3539993068[0] = nimCopy(result_3539993068[0], intZero_3539992586, NTI3154116627);
 break BeforeRet;
 break;
 case 1:
-result_3539993070[0] = nimCopy(result_3539993070[0], doMul__pkgZintobjectZops95basic95arith_u176(a_p0, b_p1), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993070[0], 1);
+result_3539993068[0] = nimCopy(result_3539993068[0], doMul__pkgZintobjectZops95basic95arith_u174(a_p0, b_p1), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993068[0], 1);
 break BeforeRet;
 break;
 }
@@ -35215,14 +35211,14 @@ break;
 }
 };
 
-return result_3539993070[0];
+return result_3539993068[0];
 
 }
 
 function HEX2A__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u21(a_p0, b_p1) {
 var result_4831838232 = null;
 
-result_4831838232 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2A__pkgZintobjectZops95basic95arith_u491(a_p0.v, b_p1.v));
+result_4831838232 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2A__pkgZintobjectZops95basic95arith_u489(a_p0.v, b_p1.v));
 
 return result_4831838232;
 
@@ -35784,8 +35780,8 @@ break BeforeRet;
 }
 
 if (((((Temporary1 = sign__pkgZintobjectZdecl95private_u60(modRes_p3), Temporary1)[0][Temporary1[1]] == (-1)) && (sign__pkgZintobjectZdecl95private_u22(w_p1) == 1)) || (((Temporary2 = sign__pkgZintobjectZdecl95private_u60(modRes_p3), Temporary2)[0][Temporary2[1]] == 1) && (sign__pkgZintobjectZdecl95private_u22(w_p1) == (-1))))) {
-modRes_p3 = nimCopy(modRes_p3, HEX2B__pkgZintobjectZops95basic95arith_u477(modRes_p3, w_p1), NTI3154116627);
-divRes_p2 = nimCopy(divRes_p2, HEX2D__pkgZintobjectZops95basic95arith_u481(divRes_p2, intOne_3539992590), NTI3154116627);
+modRes_p3 = nimCopy(modRes_p3, HEX2B__pkgZintobjectZops95basic95arith_u475(modRes_p3, w_p1), NTI3154116627);
+divRes_p2 = nimCopy(divRes_p2, HEX2D__pkgZintobjectZops95basic95arith_u479(divRes_p2, intOne_3539992590), NTI3154116627);
 }
 
 };
@@ -35982,7 +35978,7 @@ break BeforeRet;
 }
 
 if (((((Temporary1 = sign__pkgZintobjectZdecl95private_u60(modRes_p2), Temporary1)[0][Temporary1[1]] == (-1)) && (sign__pkgZintobjectZdecl95private_u22(w_p1) == 1)) || (((Temporary2 = sign__pkgZintobjectZdecl95private_u60(modRes_p2), Temporary2)[0][Temporary2[1]] == 1) && (sign__pkgZintobjectZdecl95private_u22(w_p1) == (-1))))) {
-modRes_p2 = nimCopy(modRes_p2, HEX2B__pkgZintobjectZops95basic95arith_u477(modRes_p2, w_p1), NTI3154116627);
+modRes_p2 = nimCopy(modRes_p2, HEX2B__pkgZintobjectZops95basic95arith_u475(modRes_p2, w_p1), NTI3154116627);
 }
 
 };
@@ -36160,27 +36156,27 @@ return result_3707764744;
 
 }
 
-function HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(a_p0, b_p1) {
-var result_3539993040 = false;
+function HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(a_p0, b_p1) {
+var result_3539993038 = false;
 
 BeforeRet: {
 if (!((sign__pkgZintobjectZdecl95private_u22(a_p0) == sign__pkgZintobjectZdecl95private_u22(b_p1)))) {
-result_3539993040 = false;
+result_3539993038 = false;
 break BeforeRet;
 }
 
-result_3539993040 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == 0);
+result_3539993038 = (doCompare__pkgZintobjectZops95basic95arith_u24(a_p0, b_p1) == 0);
 break BeforeRet;
 };
 
-return result_3539993040;
+return result_3539993038;
 
 }
 
 function pow2__pkgZintobjectZops95pow_u11(i_p0) {
 var result_3707764749 = ({pri_sign: 0, pri_digits: []});
 
-result_3707764749 = nimCopy(result_3707764749, HEX2A__pkgZintobjectZops95basic95arith_u491(i_p0, i_p0), NTI3154116627);
+result_3707764749 = nimCopy(result_3707764749, HEX2A__pkgZintobjectZops95basic95arith_u489(i_p0, i_p0), NTI3154116627);
 
 return result_3707764749;
 
@@ -36207,7 +36203,7 @@ failedAssertImpl__stdZassertions_u86([111,112,115,95,112,111,119,46,110,105,109,
 
 var new_b_3707764777 = posShr1__pkgZintobjectZops95pow_u6(b_p1);
 if (isZero__pkgZintobjectZsignbit_u13(new_b_3707764777)) {
-if (!(HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(b_p1, intOne_3539992590))) {
+if (!(HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(b_p1, intOne_3539992590))) {
 failedAssertImpl__stdZassertions_u86([111,112,115,95,112,111,119,46,110,105,109,40,52,54,44,32,53,41,32,96,98,32,61,61,32,105,110,116,79,110,101,96,32]);
 }
 
@@ -36218,7 +36214,7 @@ break BeforeRet;
 var half_c_3707764783 = powPos__pkgZintobjectZops95pow_u32(a_p0, new_b_3707764777);
 result_3707764771 = nimCopy(result_3707764771, pow2__pkgZintobjectZops95pow_u11(half_c_3707764783), NTI3154116627);
 if (isOdd__pkgZintobjectZsignbit_u31(b_p1)) {
-result_3707764771 = nimCopy(result_3707764771, HEX2A__pkgZintobjectZops95basic95arith_u491(result_3707764771, a_p0), NTI3154116627);
+result_3707764771 = nimCopy(result_3707764771, HEX2A__pkgZintobjectZops95basic95arith_u489(result_3707764771, a_p0), NTI3154116627);
 break BeforeRet;
 }
 
@@ -36268,14 +36264,14 @@ signHEX3D__pkgZintobjectZdecl95private_u98(intObj_p0, chckRange(negInt((((Tempor
 
 }
 
-function HEX2D__pkgZintobjectZops95basic95arith_u485(a_p0) {
-var result_3539993063 = [({pri_sign: 0, pri_digits: []})];
+function HEX2D__pkgZintobjectZops95basic95arith_u483(a_p0) {
+var result_3539993061 = [({pri_sign: 0, pri_digits: []})];
 
-result_3539993063[0] = nimCopy(result_3539993063[0], copyOnlyDigits__pkgZintobjectZutils_u28(a_p0), NTI3154116627);
-signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993063[0], sign__pkgZintobjectZdecl95private_u22(a_p0));
-flipSign__pkgZintobjectZsignbit_u27(result_3539993063[0]);
+result_3539993061[0] = nimCopy(result_3539993061[0], copyOnlyDigits__pkgZintobjectZutils_u28(a_p0), NTI3154116627);
+signHEX3D__pkgZintobjectZdecl95private_u98(result_3539993061[0], sign__pkgZintobjectZdecl95private_u22(a_p0));
+flipSign__pkgZintobjectZsignbit_u27(result_3539993061[0]);
 
-return result_3539993063[0];
+return result_3539993061[0];
 
 }
 
@@ -36305,19 +36301,19 @@ if (!!(isZero__pkgZintobjectZsignbit_u13(newR_3707764819))) break Label2;
 var tmpTuple_3707764820 = divmodNonZero__pkgZintobjectZops95divmod_u368(r_3707764818, newR_3707764819);
 var q_3707764821 = nimCopy(null, tmpTuple_3707764820["Field0"], NTI3154116627);
 var rem_3707764822 = nimCopy(null, tmpTuple_3707764820["Field1"], NTI3154116627);
-var nextT_3707764823 = HEX2D__pkgZintobjectZops95basic95arith_u481(t_3707764816, HEX2A__pkgZintobjectZops95basic95arith_u491(q_3707764821, newT_3707764817));
+var nextT_3707764823 = HEX2D__pkgZintobjectZops95basic95arith_u479(t_3707764816, HEX2A__pkgZintobjectZops95basic95arith_u489(q_3707764821, newT_3707764817));
 t_3707764816 = nimCopy(t_3707764816, newT_3707764817, NTI3154116627);
 newT_3707764817 = nimCopy(newT_3707764817, nextT_3707764823, NTI3154116627);
 r_3707764818 = nimCopy(r_3707764818, newR_3707764819, NTI3154116627);
 newR_3707764819 = nimCopy(newR_3707764819, rem_3707764822, NTI3154116627);
 }
 };
-if (!(HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(r_3707764818, intOne_3539992590))) {
+if (!(HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(r_3707764818, intOne_3539992590))) {
 raiseException({message: [98,97,115,101,32,105,115,32,110,111,116,32,105,110,118,101,114,116,105,98,108,101,32,102,111,114,32,116,104,101,32,103,105,118,101,110,32,109,111,100,117,108,117,115], parent: null, m_type: NTI134217746, name: null, trace: [], up: null}, "ValueError");
 }
 
 if (isNegative__pkgZintobjectZsignbit_u5(t_3707764816)) {
-t_3707764816 = nimCopy(t_3707764816, HEX2B__pkgZintobjectZops95basic95arith_u477(t_3707764816, modulus_p1), NTI3154116627);
+t_3707764816 = nimCopy(t_3707764816, HEX2B__pkgZintobjectZops95basic95arith_u475(t_3707764816, modulus_p1), NTI3154116627);
 }
 
 result_3707764815 = nimCopy(result_3707764815, t_3707764816, NTI3154116627);
@@ -36348,7 +36344,7 @@ return result_3707764799;
 function mulReduce__pkgZintobjectZops95pow_u71(x_p0, y_p1, modulus_p2) {
 var result_3707764811 = ({pri_sign: 0, pri_digits: []});
 
-result_3707764811 = nimCopy(result_3707764811, reducePowTerm__pkgZintobjectZops95pow_u60(HEX2A__pkgZintobjectZops95basic95arith_u491(x_p0, y_p1), modulus_p2), NTI3154116627);
+result_3707764811 = nimCopy(result_3707764811, reducePowTerm__pkgZintobjectZops95pow_u60(HEX2A__pkgZintobjectZops95basic95arith_u489(x_p0, y_p1), modulus_p2), NTI3154116627);
 
 return result_3707764811;
 
@@ -36385,16 +36381,16 @@ raiseException({message: [112,111,119,40,41,32,51,114,100,32,97,114,103,117,109,
 
 if (isNegative__pkgZintobjectZsignbit_u5(c_3707764839[0])) {
 negativeOutput_3707764840 = true;
-c_3707764839[0] = nimCopy(c_3707764839[0], HEX2D__pkgZintobjectZops95basic95arith_u485(c_3707764839[0]), NTI3154116627);
+c_3707764839[0] = nimCopy(c_3707764839[0], HEX2D__pkgZintobjectZops95basic95arith_u483(c_3707764839[0]), NTI3154116627);
 }
 
-if (HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(c_3707764839[0], intOne_3539992590)) {
+if (HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(c_3707764839[0], intOne_3539992590)) {
 result_3707764836 = nimCopy(result_3707764836, intZero_3539992586, NTI3154116627);
 break BeforeRet;
 }
 
 if (isNegative__pkgZintobjectZsignbit_u5(b_3707764838[0])) {
-b_3707764838[0] = nimCopy(b_3707764838[0], HEX2D__pkgZintobjectZops95basic95arith_u485(b_3707764838[0]), NTI3154116627);
+b_3707764838[0] = nimCopy(b_3707764838[0], HEX2D__pkgZintobjectZops95basic95arith_u483(b_3707764838[0]), NTI3154116627);
 a_3707764837[0] = nimCopy(a_3707764837[0], invMod__pkgZintobjectZops95pow_u76(a_3707764837[0], c_3707764839[0]), NTI3154116627);
 }
 
@@ -36635,7 +36631,7 @@ res_6190794090 = subInt(res_6190794090, 1);
 }
 }
 if ((negativeOutput_3707764840 && !(isZero__pkgZintobjectZsignbit_u13(z_3707764848)))) {
-z_3707764848 = nimCopy(z_3707764848, HEX2D__pkgZintobjectZops95basic95arith_u481(z_3707764848, c_3707764839[0]), NTI3154116627);
+z_3707764848 = nimCopy(z_3707764848, HEX2D__pkgZintobjectZops95basic95arith_u479(z_3707764848, c_3707764839[0]), NTI3154116627);
 }
 
 result_3707764836 = nimCopy(result_3707764836, z_3707764848, NTI3154116627);
@@ -36725,28 +36721,28 @@ return result_6190792877;
 
 }
 
-function abs__pkgZintobjectZops95basic95arith_u488(self_p0) {
+function abs__pkgZintobjectZops95basic95arith_u486(self_p0) {
 var Temporary1;
 
-var result_3539993066 = ({pri_sign: 0, pri_digits: []});
+var result_3539993064 = ({pri_sign: 0, pri_digits: []});
 
 if (isNegative__pkgZintobjectZsignbit_u5(self_p0)) {
-Temporary1 = HEX2D__pkgZintobjectZops95basic95arith_u485(self_p0);
+Temporary1 = HEX2D__pkgZintobjectZops95basic95arith_u483(self_p0);
 }
 else {
 Temporary1 = self_p0;
 }
 
-result_3539993066 = nimCopy(result_3539993066, Temporary1, NTI3154116627);
+result_3539993064 = nimCopy(result_3539993064, Temporary1, NTI3154116627);
 
-return result_3539993066;
+return result_3539993064;
 
 }
 
 function abs__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u28(self_p0) {
 var result_4831838238 = null;
 
-result_4831838238 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(abs__pkgZintobjectZops95basic95arith_u488(self_p0.v));
+result_4831838238 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(abs__pkgZintobjectZops95basic95arith_u486(self_p0.v));
 
 return result_4831838238;
 
@@ -37647,7 +37643,7 @@ result_5368709172 = nimCopy(result_5368709172, intZero_3539992586, NTI3154116627
 break BeforeRet;
 }
 
-var tup_5368709181 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16n);
+var tup_5368709181 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16);
 var wordshift_5368709182 = chckRange(Number(tup_5368709181["Field0"]), (-2147483648), 2147483647);
 var remshift_5368709183 = Number(BigInt.asUintN(8, tup_5368709181["Field1"]));
 result_5368709172 = nimCopy(result_5368709172, long_lshift1__pkgZintobjectZops95bitwise_u507(a_p0, wordshift_5368709182, remshift_5368709183), NTI3154116627);
@@ -37858,7 +37854,7 @@ result_5368709250 = nimCopy(result_5368709250, intZero_3539992586, NTI3154116627
 break BeforeRet;
 }
 
-var tup_5368709259 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16n);
+var tup_5368709259 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16);
 var wordshift_5368709260 = chckRange(Number(tup_5368709259["Field0"]), (-2147483648), 2147483647);
 var remshift_5368709261 = Number(BigInt.asUintN(8, tup_5368709259["Field1"]));
 result_5368709250 = nimCopy(result_5368709250, long_rshift1__pkgZintobjectZops95bitwise_u425(a_p0, wordshift_5368709260, remshift_5368709261), NTI3154116627);
@@ -37949,7 +37945,7 @@ flipSign__pkgZintobjectZsignbit_u27(self_p0);
 function not__pkgZintobjectZops95bitwise_u10(self_p0) {
 var result_3724541964 = [({pri_sign: 0, pri_digits: []})];
 
-result_3724541964[0] = nimCopy(result_3724541964[0], HEX2B__pkgZintobjectZops95basic95arith_u477(self_p0, intOne_3539992590), NTI3154116627);
+result_3724541964[0] = nimCopy(result_3724541964[0], HEX2B__pkgZintobjectZops95basic95arith_u475(self_p0, intOne_3539992590), NTI3154116627);
 negate__pkgZintobjectZsignbit_u29(result_3724541964[0]);
 
 return result_3724541964[0];
@@ -38002,7 +37998,7 @@ return result_6190792941;
 function HEX2D__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u25(self_p0) {
 var result_4831838235 = null;
 
-result_4831838235 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2D__pkgZintobjectZops95basic95arith_u485(self_p0.v));
+result_4831838235 = newPyInt__npythonZ79bjectsZnumobjectsZintobjectZdecl_u251(HEX2D__pkgZintobjectZops95basic95arith_u483(self_p0.v));
 
 return result_4831838235;
 
@@ -38098,7 +38094,7 @@ return result_6190792972;
 function HEX3DHEX3D__npythonZ79bjectsZnumobjectsZintobjectZops95basic95arith_u9(a_p0, b_p1) {
 var result_4831838220 = false;
 
-result_4831838220 = HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(a_p0.v, b_p1.v);
+result_4831838220 = HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(a_p0.v, b_p1.v);
 
 return result_4831838220;
 
@@ -38338,10 +38334,10 @@ var result_3707765106 = {Field0: ({pri_sign: 0, pri_digits: []}), Field1: ({pri_
 var tmpTuple_3707765107 = divmod__pkgZintobjectZops95divmod_u380(a_p0, b_p1);
 var q_3707765108 = nimCopy(null, tmpTuple_3707765107["Field0"], NTI3154116627);
 var r_3707765109 = nimCopy(null, tmpTuple_3707765107["Field1"], NTI3154116627);
-var twiceR_3707765110 = HEX2A__pkgZintobjectZops95basic95arith_u491(r_3707765109, intTwo_3539992594);
-if ((HEX3C__pkgZintobjectZops95basic95arith_u445(b_p1, twiceR_3707765110) || (HEX3DHEX3D__pkgZintobjectZops95basic95arith_u461(twiceR_3707765110, b_p1) && isOdd__pkgZintobjectZsignbit_u31(q_3707765108)))) {
-q_3707765108 = nimCopy(q_3707765108, HEX2B__pkgZintobjectZops95basic95arith_u477(q_3707765108, intOne_3539992590), NTI3154116627);
-r_3707765109 = nimCopy(r_3707765109, HEX2D__pkgZintobjectZops95basic95arith_u481(r_3707765109, b_p1), NTI3154116627);
+var twiceR_3707765110 = HEX2A__pkgZintobjectZops95basic95arith_u489(r_3707765109, intTwo_3539992594);
+if ((HEX3C__pkgZintobjectZops95basic95arith_u443(b_p1, twiceR_3707765110) || (HEX3DHEX3D__pkgZintobjectZops95basic95arith_u459(twiceR_3707765110, b_p1) && isOdd__pkgZintobjectZsignbit_u31(q_3707765108)))) {
+q_3707765108 = nimCopy(q_3707765108, HEX2B__pkgZintobjectZops95basic95arith_u475(q_3707765108, intOne_3539992590), NTI3154116627);
+r_3707765109 = nimCopy(r_3707765109, HEX2D__pkgZintobjectZops95basic95arith_u479(r_3707765109, b_p1), NTI3154116627);
 }
 
 result_3707765106 = nimCopy(result_3707765106, {Field0: nimCopy(null, q_3707765108, NTI3154116627), Field1: nimCopy(null, r_3707765109, NTI3154116627)}, NTI3707764968);
@@ -38359,11 +38355,11 @@ result_3707765114 = nimCopy(result_3707765114, self_p0, NTI3154116627);
 break BeforeRet;
 }
 
-var ndigits_3707765115 = HEX2D__pkgZintobjectZops95basic95arith_u485(oNdigits_p1);
+var ndigits_3707765115 = HEX2D__pkgZintobjectZops95basic95arith_u483(oNdigits_p1);
 var scale_3707765116 = powPos__pkgZintobjectZops95pow_u32(intTen_3539992598, ndigits_3707765115);
 var tmpTuple_3707765117 = divmodNear__pkgZintobjectZops95pow_u365(self_p0, scale_3707765116);
 var rem_3707765118 = nimCopy(null, tmpTuple_3707765117["Field1"], NTI3154116627);
-result_3707765114 = nimCopy(result_3707765114, HEX2D__pkgZintobjectZops95basic95arith_u481(self_p0, rem_3707765118), NTI3154116627);
+result_3707765114 = nimCopy(result_3707765114, HEX2D__pkgZintobjectZops95basic95arith_u479(self_p0, rem_3707765118), NTI3154116627);
 };
 
 return result_3707765114;
@@ -38793,7 +38789,7 @@ result_4043309479 = 1;
 break BeforeRet;
 }
 
-if (!!(signed_p3)) Temporary1 = false; else {        Temporary1 = HEX3C__pkgZintobjectZops95basic95arith_u445(self_p0, newInt__pkgZintobjectZdecl_u57(0));      }    if (Temporary1) {
+if (!!(signed_p3)) Temporary1 = false; else {        Temporary1 = HEX3C__pkgZintobjectZops95basic95arith_u443(self_p0, newInt__pkgZintobjectZdecl_u57(0));      }    if (Temporary1) {
 result_4043309479 = 2;
 break BeforeRet;
 }
@@ -82860,7 +82856,7 @@ break BeforeRet;
 
 }
 
-var tup_3724542654 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16n);
+var tup_3724542654 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16);
 var wordshift_3724542655 = chckRange(Number(tup_3724542654["Field0"]), (-2147483648), 2147483647);
 var remshift_3724542656 = Number(BigInt.asUintN(8, tup_3724542654["Field1"]));
 result_3724542638 = nimCopy(result_3724542638, long_rshift1__pkgZintobjectZops95bitwise_u425(a_p0, wordshift_3724542655, remshift_3724542656), NTI3154116627);
@@ -82893,7 +82889,7 @@ if ((34359738352n < shiftby_p1)) {
 raiseException({message: [116,111,111,32,109,97,110,121,32,100,105,103,105,116,115,32,105,110,32,105,110,116,101,103,101,114], parent: null, m_type: NTI134217743, name: null, trace: [], up: null}, "OverflowDefect");
 }
 
-var tup_3724542585 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16n);
+var tup_3724542585 = divmod__pkgZintobjectZops95bitwise_u628(shiftby_p1, 16);
 var wordshift_3724542586 = chckRange(Number(tup_3724542585["Field0"]), (-2147483648), 2147483647);
 var remshift_3724542587 = Number(BigInt.asUintN(8, tup_3724542585["Field1"]));
 result_3724542570 = nimCopy(result_3724542570, long_lshift1__pkgZintobjectZops95bitwise_u507(a_p0, wordshift_3724542586, remshift_3724542587), NTI3154116627);
@@ -82912,8 +82908,8 @@ var Temporary9;
 var result_4026531852 = ({pri_sign: 0, pri_digits: []});
 
 BeforeRet: {
-var left_4026531853 = [abs__pkgZintobjectZops95basic95arith_u488(a_p0)];
-var right_4026531854 = [abs__pkgZintobjectZops95basic95arith_u488(b_p1)];
+var left_4026531853 = [abs__pkgZintobjectZops95basic95arith_u486(a_p0)];
+var right_4026531854 = [abs__pkgZintobjectZops95basic95arith_u486(b_p1)];
 if ((((Temporary1 = digits__pkgZintobjectZdecl95private_u79(left_4026531853[0]), Temporary1)[0][Temporary1[1]]).length == 0)) {
 result_4026531852 = nimCopy(result_4026531852, right_4026531854[0], NTI3154116627);
 break BeforeRet;
@@ -82955,13 +82951,13 @@ if (!isEven__pkgZintobjectZsignbit_u34(right_4026531854[0])) break Label11;
 right_4026531854[0] = nimCopy(right_4026531854[0], shr__pkgZintobjectZops95gcdlcm_u96(right_4026531854[0]), NTI3154116627);
 }
 };
-if (HEX3C__pkgZintobjectZops95basic95arith_u445(right_4026531854[0], left_4026531853[0])) {
+if (HEX3C__pkgZintobjectZops95basic95arith_u443(right_4026531854[0], left_4026531853[0])) {
 var HEX3Atmp_10636755791 = nimCopy(null, left_4026531853[0], NTI3154116627);
 left_4026531853[0] = nimCopy(left_4026531853[0], right_4026531854[0], NTI3154116627);
 right_4026531854[0] = nimCopy(right_4026531854[0], HEX3Atmp_10636755791, NTI3154116627);
 }
 
-right_4026531854[0] = nimCopy(right_4026531854[0], HEX2D__pkgZintobjectZops95basic95arith_u481(right_4026531854[0], left_4026531853[0]), NTI3154116627);
+right_4026531854[0] = nimCopy(right_4026531854[0], HEX2D__pkgZintobjectZops95basic95arith_u479(right_4026531854[0], left_4026531853[0]), NTI3154116627);
 }
 };
 result_4026531852 = nimCopy(result_4026531852, shl__pkgZintobjectZops95bitwise_u613(left_4026531853[0], shift_4026531935), NTI3154116627);
@@ -83065,7 +83061,7 @@ result_4026531982 = nimCopy(result_4026531982, intZero_3539992586, NTI3154116627
 break BeforeRet;
 }
 
-result_4026531982 = nimCopy(result_4026531982, abs__pkgZintobjectZops95basic95arith_u488(HEX2A__pkgZintobjectZops95basic95arith_u491(HEX2FHEX2F__pkgZintobjectZops95divmod_u299(a_p0, gcd__pkgZintobjectZops95gcdlcm_u9(a_p0, b_p1)), b_p1)), NTI3154116627);
+result_4026531982 = nimCopy(result_4026531982, abs__pkgZintobjectZops95basic95arith_u486(HEX2A__pkgZintobjectZops95basic95arith_u489(HEX2FHEX2F__pkgZintobjectZops95divmod_u299(a_p0, gcd__pkgZintobjectZops95gcdlcm_u9(a_p0, b_p1)), b_p1)), NTI3154116627);
 };
 
 return result_4026531982;
@@ -85801,7 +85797,7 @@ break BeforeRet;
 var j_3942645880 = ((k_p1 / 2) >>> 0);
 var a_3942645886 = permCombSmall__pkgZintobjectZmathZpermcomb_u111(n_p0, j_3942645880);
 var b_3942645892 = permCombSmall__pkgZintobjectZmathZpermcomb_u111(((n_p0 - j_3942645880) >>> 0), ((k_p1 - j_3942645880) >>> 0));
-result_3942645876 = nimCopy(result_3942645876, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(HEX2A__pkgZintobjectZops95basic95arith_u491(a_3942645886, b_3942645892), permCombSmall__pkgZintobjectZmathZpermcomb_u111(k_p1, j_3942645880)), NTI3154116627);
+result_3942645876 = nimCopy(result_3942645876, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(HEX2A__pkgZintobjectZops95basic95arith_u489(a_3942645886, b_3942645892), permCombSmall__pkgZintobjectZmathZpermcomb_u111(k_p1, j_3942645880)), NTI3154116627);
 };
 
 return result_3942645876;
@@ -85824,9 +85820,9 @@ break BeforeRet;
 
 var j_3942645904 = ((k_p1 / 2) >>> 0);
 var a_3942645910 = permCombBig__pkgZintobjectZmathZpermcomb_u138(n_p0, j_3942645904);
-var nMinusJ_3942645914 = HEX2D__pkgZintobjectZops95basic95arith_u481(n_p0, newInt__pkgZintobjectZmathZfactorial_u25(j_3942645904));
+var nMinusJ_3942645914 = HEX2D__pkgZintobjectZops95basic95arith_u479(n_p0, newInt__pkgZintobjectZmathZfactorial_u25(j_3942645904));
 var b_3942645920 = permCombBig__pkgZintobjectZmathZpermcomb_u138(nMinusJ_3942645914, ((k_p1 - j_3942645904) >>> 0));
-result_3942645903 = nimCopy(result_3942645903, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(HEX2A__pkgZintobjectZops95basic95arith_u491(a_3942645910, b_3942645920), permCombSmall__pkgZintobjectZmathZpermcomb_u111(k_p1, j_3942645904)), NTI3154116627);
+result_3942645903 = nimCopy(result_3942645903, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(HEX2A__pkgZintobjectZops95basic95arith_u489(a_3942645910, b_3942645920), permCombSmall__pkgZintobjectZmathZpermcomb_u111(k_p1, j_3942645904)), NTI3154116627);
 };
 
 return result_3942645903;
@@ -85838,14 +85834,14 @@ var result_3942645862 = ({pri_sign: 0, pri_digits: []});
 
 BeforeRet: {
 check__pkgZintobjectZmathZpermcomb_u39(n_p0, k_p1);
-if (HEX3C__pkgZintobjectZops95basic95arith_u445(n_p0, k_p1)) {
+if (HEX3C__pkgZintobjectZops95basic95arith_u443(n_p0, k_p1)) {
 result_3942645862 = nimCopy(result_3942645862, intZero_3539992586, NTI3154116627);
 break BeforeRet;
 }
 
 var kk_3942645863 = nimCopy(null, k_p1, NTI3154116627);
-var nk_3942645864 = HEX2D__pkgZintobjectZops95basic95arith_u481(n_p0, k_p1);
-if (HEX3C__pkgZintobjectZops95basic95arith_u445(nk_3942645864, kk_3942645863)) {
+var nk_3942645864 = HEX2D__pkgZintobjectZops95basic95arith_u479(n_p0, k_p1);
+if (HEX3C__pkgZintobjectZops95basic95arith_u443(nk_3942645864, kk_3942645863)) {
 kk_3942645863 = nimCopy(kk_3942645863, nk_3942645864, NTI3154116627);
 }
 
@@ -86871,7 +86867,7 @@ break BeforeRet;
 }
 
 var midpoint_3959423027 = ((((start_p0 + numOperands_3959422990) >>> 0) | 1) >>> 0);
-result_3959422989 = nimCopy(result_3959422989, HEX2A__pkgZintobjectZops95basic95arith_u491(partialProduct__pkgZintobjectZmathZfactorial_u9(start_p0, midpoint_3959423027, bit_length__pkgZintobjectZmathZfactorial_u52(((midpoint_3959423027 - 2) >>> 0))), partialProduct__pkgZintobjectZmathZfactorial_u9(midpoint_3959423027, stop_p1, maxBits_p2)), NTI3154116627);
+result_3959422989 = nimCopy(result_3959422989, HEX2A__pkgZintobjectZops95basic95arith_u489(partialProduct__pkgZintobjectZmathZfactorial_u9(start_p0, midpoint_3959423027, bit_length__pkgZintobjectZmathZfactorial_u52(((midpoint_3959423027 - 2) >>> 0))), partialProduct__pkgZintobjectZmathZfactorial_u9(midpoint_3959423027, stop_p1, maxBits_p2)), NTI3154116627);
 };
 
 return result_3959422989;
@@ -86901,8 +86897,8 @@ break Label4;
 
 var lower_3959423078 = upper_3959423063;
 upper_3959423063 = ((((v_3959423077 + 1) >>> 0) | 1) >>> 0);
-inner_3959423061 = nimCopy(inner_3959423061, HEX2A__pkgZintobjectZops95basic95arith_u491(inner_3959423061, partialProduct__pkgZintobjectZmathZfactorial_u9(lower_3959423078, upper_3959423063, bit_length__pkgZintobjectZmathZfactorial_u52(((upper_3959423063 - 2) >>> 0)))), NTI3154116627);
-outer_3959423062 = nimCopy(outer_3959423062, HEX2A__pkgZintobjectZops95basic95arith_u491(outer_3959423062, inner_3959423061), NTI3154116627);
+inner_3959423061 = nimCopy(inner_3959423061, HEX2A__pkgZintobjectZops95basic95arith_u489(inner_3959423061, partialProduct__pkgZintobjectZmathZfactorial_u9(lower_3959423078, upper_3959423063, bit_length__pkgZintobjectZmathZfactorial_u52(((upper_3959423063 - 2) >>> 0)))), NTI3154116627);
+outer_3959423062 = nimCopy(outer_3959423062, HEX2A__pkgZintobjectZops95basic95arith_u489(outer_3959423062, inner_3959423061), NTI3154116627);
 };
 res_10552873504 = subInt(res_10552873504, 1);
 }
@@ -88065,41 +88061,6 @@ return result_4227858492;
 
 }
 
-function fill__pkgZintobjectZmathZisqrt_u124(digits_p0, digits_p0_Idx, ui_p1) {
-var ui_4227858560 = ui_p1;
-Label1: {
-Label2: while (true) {
-if (!!((ui_4227858560 == 0))) break Label2;
-digits_p0[digits_p0_Idx].push(Number(BigInt.asUintN(16, BigInt(ui_4227858560))));;
-ui_4227858560 = (ui_4227858560 >>> (16 & 31));
-}
-};
-
-
-}
-
-function newInt__pkgZintobjectZmathZisqrt_u120(i_p0) {
-var Temporary1;
-var Temporary2;
-var Temporary3;
-
-var result_4227858555 = [({pri_sign: 0, pri_digits: []})];
-
-BeforeRet: {
-result_4227858555[0] = nimCopy(result_4227858555[0], newIntSimple__pkgZintobjectZdecl_u5(), NTI3154116627);
-if ((i_p0 == 0)) {
-(Temporary1 = sign__pkgZintobjectZdecl95private_u60(result_4227858555[0]), Temporary1)[0][Temporary1[1]] = 0;
-break BeforeRet;
-}
-
-(Temporary2 = sign__pkgZintobjectZdecl95private_u60(result_4227858555[0]), Temporary2)[0][Temporary2[1]] = 1;
-fill__pkgZintobjectZmathZisqrt_u124((Temporary3 = digits__pkgZintobjectZdecl95private_u79(result_4227858555[0]), Temporary3)[0], Temporary3[1], i_p0);
-};
-
-return result_4227858555[0];
-
-}
-
 function shr__pkgZintobjectZops95bitwise_u651(a_p0, b_p1) {
 var result_3724542606 = ({pri_sign: 0, pri_digits: []});
 
@@ -88126,6 +88087,41 @@ result_3724542606 = nimCopy(result_3724542606, shr__pkgZintobjectZops95bitwise_u
 };
 
 return result_3724542606;
+
+}
+
+function fill__pkgZintobjectZmathZisqrt_u159(digits_p0, digits_p0_Idx, ui_p1) {
+var ui_4227858595 = ui_p1;
+Label1: {
+Label2: while (true) {
+if (!!((ui_4227858595 == 0))) break Label2;
+digits_p0[digits_p0_Idx].push(Number(BigInt.asUintN(16, BigInt(ui_4227858595))));;
+ui_4227858595 = (ui_4227858595 >>> (16 & 31));
+}
+};
+
+
+}
+
+function newInt__pkgZintobjectZmathZisqrt_u155(i_p0) {
+var Temporary1;
+var Temporary2;
+var Temporary3;
+
+var result_4227858590 = [({pri_sign: 0, pri_digits: []})];
+
+BeforeRet: {
+result_4227858590[0] = nimCopy(result_4227858590[0], newIntSimple__pkgZintobjectZdecl_u5(), NTI3154116627);
+if ((i_p0 == 0)) {
+(Temporary1 = sign__pkgZintobjectZdecl95private_u60(result_4227858590[0]), Temporary1)[0][Temporary1[1]] = 0;
+break BeforeRet;
+}
+
+(Temporary2 = sign__pkgZintobjectZdecl95private_u60(result_4227858590[0]), Temporary2)[0][Temporary2[1]] = 1;
+fill__pkgZintobjectZmathZisqrt_u159((Temporary3 = digits__pkgZintobjectZdecl95private_u79(result_4227858590[0]), Temporary3)[0], Temporary3[1], i_p0);
+};
+
+return result_4227858590[0];
 
 }
 
@@ -88156,48 +88152,48 @@ var c_4227858444 = divInt64(subInt64(numbits__pkgZintobjectZbit95length_u12(n_p0
 if ((c_4227858444 <= 31n)) {
 var m_4227858488 = toSomeUnsignedIntUnsafe__pkgZintobjectZmathZisqrt_u22(n_p0);
 var res_4227858551 = isqrtPositive__pkgZintobjectZmathZisqrt_u57(m_4227858488);
-result_4227858443 = nimCopy(result_4227858443, newInt__pkgZintobjectZmathZisqrt_u120(Number(BigInt.asUintN(32, BigInt(res_4227858551)))), NTI3154116627);
+result_4227858443 = nimCopy(result_4227858443, newInt__pkgZintobjectZdecl_u57(res_4227858551), NTI3154116627);
 break BeforeRet;
 }
 
-var c_bit_length_4227858578 = 6;
+var c_bit_length_4227858555 = 6;
 Label1: {
 Label2: while (true) {
-if (!(0n < (c_4227858444 >> (BigInt(c_bit_length_4227858578) & 63n)))) break Label2;
-c_bit_length_4227858578 = addInt(c_bit_length_4227858578, 1);
+if (!(0n < (c_4227858444 >> (BigInt(c_bit_length_4227858555) & 63n)))) break Label2;
+c_bit_length_4227858555 = addInt(c_bit_length_4227858555, 1);
 }
 };
-var d_4227858592 = (c_4227858444 >> (BigInt(subInt(c_bit_length_4227858578, 5)) & 63n));
-var b_4227858597 = nimCopy(null, shr__pkgZintobjectZops95bitwise_u651(n_p0, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, subInt64(mulInt64(2n, c_4227858444), 62n)))), NTI3154116627);
-var m_4227858598 = [0n];
-var notOvf_4227858603 = absToUInt__pkgZintobjectZops95toint_u73(b_4227858597, m_4227858598, 0);
-if (!(notOvf_4227858603)) {
+var d_4227858569 = (c_4227858444 >> (BigInt(subInt(c_bit_length_4227858555, 5)) & 63n));
+var b_4227858574 = nimCopy(null, shr__pkgZintobjectZops95bitwise_u651(n_p0, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, subInt64(mulInt64(2n, c_4227858444), 62n)))), NTI3154116627);
+var m_4227858575 = [0n];
+var notOvf_4227858580 = absToUInt__pkgZintobjectZops95toint_u73(b_4227858574, m_4227858575, 0);
+if (!(notOvf_4227858580)) {
 raiseException({message: [105,110,116,32,99,97,110,110,111,116,32,102,105,116,32,105,110,116,111,32,97,32,66,105,103,103,101,115,116,85,73,110,116], parent: null, m_type: NTI134217743, name: null, trace: [], up: null}, "OverflowDefect");
 }
 
-var u_4227858609 = (approximate_isqrt__pkgZintobjectZmathZisqrt95utils_u3(m_4227858598[0]) >>> (chckRange(Number(subInt64(31n, d_4227858592)), (-2147483648), 2147483647) & 31));
-var a_4227858613 = newInt__pkgZintobjectZmathZisqrt_u120(u_4227858609);
+var u_4227858586 = (approximate_isqrt__pkgZintobjectZmathZisqrt95utils_u3(m_4227858575[0]) >>> (subInt64(31n, d_4227858569) & 31));
+var a_4227858613 = newInt__pkgZintobjectZmathZisqrt_u155(u_4227858586);
 Label3: {
 var s_4227858619 = 0;
 var colontmp__10552873518 = 0;
-colontmp__10552873518 = subInt(c_bit_length_4227858578, 6);
+colontmp__10552873518 = subInt(c_bit_length_4227858555, 6);
 var res_10552873519 = colontmp__10552873518;
 Label4: {
 Label5: while (true) {
 if (!(0 <= res_10552873519)) break Label5;
 s_4227858619 = res_10552873519;
 var q_4227858620 = ({pri_sign: 0, pri_digits: []});
-var e_4227858621 = d_4227858592;
-d_4227858592 = (c_4227858444 >> (BigInt(s_4227858619) & 63n));
-q_4227858620 = nimCopy(q_4227858620, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(shr__pkgZintobjectZops95bitwise_u651(n_p0, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, addInt64(subInt64(subInt64(mulInt64(2n, c_4227858444), e_4227858621), d_4227858592), 1n)))), a_4227858613), NTI3154116627);
-a_4227858613 = nimCopy(a_4227858613, HEX2B__pkgZintobjectZops95basic95arith_u477(shl__pkgZintobjectZops95bitwise_u580(a_4227858613, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, subInt64(subInt64(d_4227858592, e_4227858621), 1n)))), q_4227858620), NTI3154116627);
+var e_4227858621 = d_4227858569;
+d_4227858569 = (c_4227858444 >> (BigInt(s_4227858619) & 63n));
+q_4227858620 = nimCopy(q_4227858620, HEX2FHEX2F__pkgZintobjectZops95divmod_u299(shr__pkgZintobjectZops95bitwise_u651(n_p0, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, addInt64(subInt64(subInt64(mulInt64(2n, c_4227858444), e_4227858621), d_4227858569), 1n)))), a_4227858613), NTI3154116627);
+a_4227858613 = nimCopy(a_4227858613, HEX2B__pkgZintobjectZops95basic95arith_u475(shl__pkgZintobjectZops95bitwise_u580(a_4227858613, newInt__pkgZintobjectZmathZfactorial_u117(BigInt.asUintN(64, subInt64(subInt64(d_4227858569, e_4227858621), 1n)))), q_4227858620), NTI3154116627);
 res_10552873519 = subInt(res_10552873519, 1);
 }
 };
 };
-var a_too_large_4227858634 = HEX3C__pkgZintobjectZops95basic95arith_u445(n_p0, HEX2A__pkgZintobjectZops95basic95arith_u491(a_4227858613, a_4227858613));
+var a_too_large_4227858634 = HEX3C__pkgZintobjectZops95basic95arith_u443(n_p0, HEX2A__pkgZintobjectZops95basic95arith_u489(a_4227858613, a_4227858613));
 if (a_too_large_4227858634) {
-a_4227858613 = nimCopy(a_4227858613, HEX2D__pkgZintobjectZops95basic95arith_u481(a_4227858613, newInt__pkgZintobjectZdecl_u57(1)), NTI3154116627);
+a_4227858613 = nimCopy(a_4227858613, HEX2D__pkgZintobjectZops95basic95arith_u479(a_4227858613, newInt__pkgZintobjectZdecl_u57(1)), NTI3154116627);
 }
 
 result_4227858443 = nimCopy(result_4227858443, a_4227858613, NTI3154116627);
@@ -89432,7 +89428,7 @@ break BeforeRet;
 var j_3942645823 = ((k_p1 / 2) >>> 0);
 var a_3942645829 = permCombSmall__pkgZintobjectZmathZpermcomb_u54(n_p0, j_3942645823);
 var b_3942645835 = permCombSmall__pkgZintobjectZmathZpermcomb_u54(((n_p0 - j_3942645823) >>> 0), ((k_p1 - j_3942645823) >>> 0));
-result_3942645819 = nimCopy(result_3942645819, HEX2A__pkgZintobjectZops95basic95arith_u491(a_3942645829, b_3942645835), NTI3154116627);
+result_3942645819 = nimCopy(result_3942645819, HEX2A__pkgZintobjectZops95basic95arith_u489(a_3942645829, b_3942645835), NTI3154116627);
 };
 
 return result_3942645819;
@@ -89455,9 +89451,9 @@ break BeforeRet;
 
 var j_3942645842 = ((k_p1 / 2) >>> 0);
 var a_3942645848 = permCombBig__pkgZintobjectZmathZpermcomb_u76(n_p0, j_3942645842);
-var nMinusJ_3942645852 = HEX2D__pkgZintobjectZops95basic95arith_u481(n_p0, newInt__pkgZintobjectZmathZfactorial_u25(j_3942645842));
+var nMinusJ_3942645852 = HEX2D__pkgZintobjectZops95basic95arith_u479(n_p0, newInt__pkgZintobjectZmathZfactorial_u25(j_3942645842));
 var b_3942645858 = permCombBig__pkgZintobjectZmathZpermcomb_u76(nMinusJ_3942645852, ((k_p1 - j_3942645842) >>> 0));
-result_3942645841 = nimCopy(result_3942645841, HEX2A__pkgZintobjectZops95basic95arith_u491(a_3942645848, b_3942645858), NTI3154116627);
+result_3942645841 = nimCopy(result_3942645841, HEX2A__pkgZintobjectZops95basic95arith_u489(a_3942645848, b_3942645858), NTI3154116627);
 };
 
 return result_3942645841;
@@ -89469,7 +89465,7 @@ var result_3942645807 = ({pri_sign: 0, pri_digits: []});
 
 BeforeRet: {
 check__pkgZintobjectZmathZpermcomb_u39(n_p0, k_p1);
-if (HEX3C__pkgZintobjectZops95basic95arith_u445(n_p0, k_p1)) {
+if (HEX3C__pkgZintobjectZops95basic95arith_u443(n_p0, k_p1)) {
 result_3942645807 = nimCopy(result_3942645807, intZero_3539992586, NTI3154116627);
 break BeforeRet;
 }
@@ -107741,19 +107737,19 @@ Temporary1 = last_p3;
 var last_805308117 = Temporary1;
 Label2: {
 var i_805308123 = 0;
-var colontmp__6492782634 = 0;
-colontmp__6492782634 = start_p2;
-var res_6492782635 = last_805308117;
+var colontmp__6492782658 = 0;
+colontmp__6492782658 = start_p2;
+var res_6492782659 = last_805308117;
 Label3: {
 Label4: while (true) {
-if (!(colontmp__6492782634 <= res_6492782635)) break Label4;
-i_805308123 = res_6492782635;
+if (!(colontmp__6492782658 <= res_6492782659)) break Label4;
+i_805308123 = res_6492782659;
 if ((sub_p1 == s_p0[chckIndx(i_805308123, 0, (s_p0).length - 1)])) {
 result_805308116 = i_805308123;
 break BeforeRet;
 }
 
-res_6492782635 = subInt(res_6492782635, 1);
+res_6492782659 = subInt(res_6492782659, 1);
 }
 };
 };
@@ -135873,7 +135869,7 @@ function newPyInt__npythonZ80ythonZstructmember_u349(i_p0) {
 var result_12448694624 = null;
 
 result_12448694624 = newPyIntSimple__npythonZ79bjectsZnumobjectsZintobjectZdecl_u166();
-result_12448694624.v = nimCopy(result_12448694624.v, newInt__pkgZintobjectZmathZisqrt_u120(i_p0), NTI3154116627);
+result_12448694624.v = nimCopy(result_12448694624.v, newInt__pkgZintobjectZmathZisqrt_u155(i_p0), NTI3154116627);
 
 return result_12448694624;
 
@@ -142038,7 +142034,7 @@ nimAddStrStr(result_p0[result_p0_Idx], alignString__pureZstrformat_u20(value_113
 function Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u74() {
 var result_11408506955 = [];
 
-result_11408506955 = nimCopy(null, [116,97,103,115,47,118,48,46,50,46,49,45,100,105,114,116,121,58,97,97,51,54,54,99,97,44,32,50,48,50,54,45,48,55,45,50,53,44,32,49,50,58,48,56,58,51,53], NTI33554449);
+result_11408506955 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,99,99,98,99,102,48,98,44,32,50,48,50,54,45,48,55,45,50,53,44,32,50,49,58,48,57,58,53,48], NTI33554449);
 
 return result_11408506955;
 
@@ -142084,12 +142080,12 @@ function gitidentifier__npythonZ77odulesZgetbuildinfo_u66() {
 var result_11408506947 = [];
 
 BeforeRet: {
-result_11408506947 = nimCopy(null, [116,97,103,115,47,118,48,46,50,46,49,45,100,105,114,116,121], NTI33554449);
+result_11408506947 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121], NTI33554449);
 if ((!(eqStrings(result_11408506947, [])) && !(eqStrings(result_11408506947, [117,110,100,101,102,105,110,101,100])))) {
 break BeforeRet;
 }
 
-result_11408506947 = nimCopy(null, [116,97,103,115,47,118,48,46,50,46,49], NTI33554449);
+result_11408506947 = nimCopy(null, [109,97,115,116,101,114], NTI33554449);
 };
 
 return result_11408506947;
@@ -142099,7 +142095,7 @@ return result_11408506947;
 function gitversion__npythonZ77odulesZgetbuildinfo_u64() {
 var result_11408506945 = [];
 
-result_11408506945 = nimCopy(null, [97,97,51,54,54,99,97], NTI33554449);
+result_11408506945 = nimCopy(null, [99,99,98,99,102,48,98], NTI33554449);
 
 return result_11408506945;
 
