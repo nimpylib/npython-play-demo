@@ -108550,13 +108550,13 @@ i_788529396 = subInt(i_788529396, 1);
 };
 Label3: {
 var j_788529411 = 0;
-var colontmp__11408506903 = 0;
-colontmp__11408506903 = subInt(i_788529396, 1);
-var res_11408506904 = colontmp__11408506903;
+var colontmp__11408506906 = 0;
+colontmp__11408506906 = subInt(i_788529396, 1);
+var res_11408506907 = colontmp__11408506906;
 Label4: {
 Label5: while (true) {
-if (!(0 <= res_11408506904)) break Label5;
-j_788529411 = res_11408506904;
+if (!(0 <= res_11408506907)) break Label5;
+j_788529411 = res_11408506907;
 if ((ConstSet605[path_p0[chckIndx(j_788529411, 0, (path_p0).length - 1)]] != undefined)) {
 result_788529394 = (-1);
 break BeforeRet;
@@ -108567,7 +108567,7 @@ result_788529394 = i_788529396;
 break Label3;
 }
 }
-res_11408506904 = subInt(res_11408506904, 1);
+res_11408506907 = subInt(res_11408506907, 1);
 }
 };
 };
@@ -142037,12 +142037,12 @@ nimAddStrStr(result_p0[result_p0_Idx], alignString__pureZstrformat_u20(value_113
 
 }
 
-function Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u74() {
-var result_11408506955 = [];
+function Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u85() {
+var result_11408506966 = [];
 
-result_11408506955 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,99,51,55,97,53,51,57,44,32,50,48,50,54,45,48,55,45,51,49,44,32,49,57,58,49,51,58,50,51], NTI33554449);
+result_11408506966 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,49,55,97,51,57,56,101,44,32,50,48,50,54,45,48,55,45,51,49,44,32,49,57,58,50,52,58,51,56], NTI33554449);
 
-return result_11408506955;
+return result_11408506966;
 
 }
 
@@ -142062,7 +142062,7 @@ Label1: {
 var fmtRes_11391729675 = [mnewString(0)];
 formatValue__npythonZ80ythonZgetversion_u12(fmtRes_11391729675, 0, [48,46,50,46,49]);
 nimAddStrStr(fmtRes_11391729675[0], [32,40]);;
-formatValue__npythonZ80ythonZgetversion_u12(fmtRes_11391729675, 0, Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u74());
+formatValue__npythonZ80ythonZgetversion_u12(fmtRes_11391729675, 0, Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u85());
 nimAddStrStr(fmtRes_11391729675[0], [41,32]);;
 formatValue__npythonZ80ythonZgetversion_u12(fmtRes_11391729675, 0, Py_GetCompiler__npythonZ80ythonZgetversion_u4());
 };
@@ -142082,28 +142082,28 @@ return result_11274289200;
 
 }
 
-function gitidentifier__npythonZ77odulesZgetbuildinfo_u66() {
-var result_11408506947 = [];
+function gitidentifier__npythonZ77odulesZgetbuildinfo_u77() {
+var result_11408506958 = [];
 
 BeforeRet: {
-result_11408506947 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121], NTI33554449);
-if ((!(eqStrings(result_11408506947, [])) && !(eqStrings(result_11408506947, [117,110,100,101,102,105,110,101,100])))) {
+result_11408506958 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121], NTI33554449);
+if ((!(eqStrings(result_11408506958, [])) && !(eqStrings(result_11408506958, [117,110,100,101,102,105,110,101,100])))) {
 break BeforeRet;
 }
 
-result_11408506947 = nimCopy(null, [109,97,115,116,101,114], NTI33554449);
+result_11408506958 = nimCopy(null, [109,97,115,116,101,114], NTI33554449);
 };
 
-return result_11408506947;
+return result_11408506958;
 
 }
 
-function gitversion__npythonZ77odulesZgetbuildinfo_u64() {
-var result_11408506945 = [];
+function gitversion__npythonZ77odulesZgetbuildinfo_u75() {
+var result_11408506956 = [];
 
-result_11408506945 = nimCopy(null, [99,51,55,97,53,51,57], NTI33554449);
+result_11408506956 = nimCopy(null, [49,55,97,51,57,56,101], NTI33554449);
 
-return result_11408506945;
+return result_11408506956;
 
 }
 
@@ -142364,7 +142364,7 @@ result_11274289222 = excHEX60gensym17_11274289255;
 break BeforeRet;
 }
 
-var vHEX60gensym26_11274289293 = newPyTuple__npythonZ79bjectsZexceptionsZbase_u7162([newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113([78,80,121,116,104,111,110], false), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(gitidentifier__npythonZ77odulesZgetbuildinfo_u66(), false), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(gitversion__npythonZ77odulesZgetbuildinfo_u64(), false)]);
+var vHEX60gensym26_11274289293 = newPyTuple__npythonZ79bjectsZexceptionsZbase_u7162([newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113([78,80,121,116,104,111,110], false), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(gitidentifier__npythonZ77odulesZgetbuildinfo_u77(), false), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(gitversion__npythonZ77odulesZgetbuildinfo_u75(), false)]);
 var excHEX60gensym27_11274289295 = vHEX60gensym26_11274289293;
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(excHEX60gensym27_11274289295)) {
 Temporary2 = excHEX60gensym27_11274289295.thrown;
