@@ -22579,22 +22579,22 @@ return result_4798283803;
 
 }
 
-function add__npythonZ79bjectsZexceptionsZextra95utils_u22(x_p0, x_p0_Idx, y_p1) {
+function add__npythonZ79bjectsZexceptionsZextra95utils_u18(x_p0, x_p0_Idx, y_p1) {
 var Temporary1;
 
-var xl_5586812957 = (x_p0[x_p0_Idx]).length;
-if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_5586812957, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(null); }
+var xl_5586812953 = (x_p0[x_p0_Idx]).length;
+if (x_p0[x_p0_Idx].length < (Temporary1 = chckRange(addInt(xl_5586812953, (y_p1).length), 0, 2147483647), Temporary1)) { for (var i = x_p0[x_p0_Idx].length ; i < Temporary1 ; ++i) x_p0[x_p0_Idx].push(null); }
 else { x_p0[x_p0_Idx].length = Temporary1; };
 Label2: {
-var i_5586812972 = 0;
+var i_5586812968 = 0;
 var colontmp__6039798644 = 0;
 colontmp__6039798644 = (y_p1).length - 1;
 var res_6039798645 = 0;
 Label3: {
 Label4: while (true) {
 if (!(res_6039798645 <= colontmp__6039798644)) break Label4;
-i_5586812972 = res_6039798645;
-x_p0[x_p0_Idx][chckIndx(addInt(xl_5586812957, i_5586812972), 0, (x_p0[x_p0_Idx]).length - 1)] = y_p1[chckIndx(i_5586812972, 0, (y_p1).length - 1)];
+i_5586812968 = res_6039798645;
+x_p0[x_p0_Idx][chckIndx(addInt(xl_5586812953, i_5586812968), 0, (x_p0[x_p0_Idx]).length - 1)] = y_p1[chckIndx(i_5586812968, 0, (y_p1).length - 1)];
 res_6039798645 = addInt(res_6039798645, 1);
 }
 };
@@ -22614,7 +22614,7 @@ Label2: {
 Label3: while (true) {
 if (!(res_6039798641 <= n_p1)) break Label3;
 __6039797979 = res_6039798641;
-add__npythonZ79bjectsZexceptionsZextra95utils_u22(result_6039797958, 0, s_p0);
+add__npythonZ79bjectsZexceptionsZextra95utils_u18(result_6039797958, 0, s_p0);
 res_6039798641 = addInt(res_6039798641, 1);
 }
 };
@@ -26843,7 +26843,7 @@ var result_5754586276 = null;
 
 BeforeRet: {
 if (ofPyListObject__npythonZ79bjectsZlistobject_u180(other_p1)) {
-add__npythonZ79bjectsZexceptionsZextra95utils_u22(self_p0, "items", other_p1.items);
+add__npythonZ79bjectsZexceptionsZextra95utils_u18(self_p0, "items", other_p1.items);
 }
 else {
 var colontmpD__5754587385 = false;
@@ -65870,45 +65870,43 @@ var Temporary2;
 var result_5586812941 = null;
 
 BeforeRet: {
-var colontmpD__9059701821 = null;
-colontmpD__9059701821 = exception_type_p0;
-var args_5586812946 = [[colontmpD__9059701821]];
+var args_5586812942 = [[]];
 if (((value_p1 == null) || isPyNone__npythonZ79bjectsZnoneobject_u237(value_p1))) {
 }
 else {
 if (ofPyTupleObject__npythonZ79bjectsZtupleobjectZdecl_u164(value_p1)) {
-add__npythonZ79bjectsZexceptionsZextra95utils_u22(args_5586812946, 0, value_p1.items);
+add__npythonZ79bjectsZexceptionsZextra95utils_u18(args_5586812942, 0, value_p1.items);
 }
 else {
-var colontmpD__9059701822 = null;
-colontmpD__9059701822 = value_p1;
-args_5586812946[0].push(colontmpD__9059701822);;
+var colontmpD__9059701821 = null;
+colontmpD__9059701821 = value_p1;
+args_5586812942[0].push(colontmpD__9059701821);;
 }
 }
-var res_5586812977 = exception_type_p0.pybase_head.pyType.magicMethods.Field56(exception_type_p0, args_5586812946[0], null);
-result_5586812941 = res_5586812977;
+var res_5586812973 = exception_type_p0.pybase_head.pyType.magicMethods.Field56(exception_type_p0, args_5586812942[0], null);
+result_5586812941 = res_5586812973;
 if (!!((result_5586812941 == null))) Temporary1 = false; else {        Temporary1 = !(ofPyExceptionInstance__npythonZ79bjectsZexceptionsZbase_u16(result_5586812941));      }    if (Temporary1) {
+var colontmpD__9059701822 = false;
 var colontmpD__9059701823 = false;
-var colontmpD__9059701824 = false;
-var obj_exc_repr_5586812981 = PyObject_ReprNonNil__npythonZ79bjectsZpyobject95apisZstrings_u36(exception_type_p0);
-var excHEX60gensym2_5586812983 = obj_exc_repr_5586812981;
-if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(excHEX60gensym2_5586812983)) {
-colontmpD__9059701823 = excHEX60gensym2_5586812983.thrown;
-Temporary2 = colontmpD__9059701823;
+var obj_exc_repr_5586812977 = PyObject_ReprNonNil__npythonZ79bjectsZpyobject95apisZstrings_u36(exception_type_p0);
+var excHEX60gensym2_5586812979 = obj_exc_repr_5586812977;
+if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(excHEX60gensym2_5586812979)) {
+colontmpD__9059701822 = excHEX60gensym2_5586812979.thrown;
+Temporary2 = colontmpD__9059701822;
 }
 else {
-colontmpD__9059701824 = false;
-Temporary2 = colontmpD__9059701824;
+colontmpD__9059701823 = false;
+Temporary2 = colontmpD__9059701823;
 }
 
 if (Temporary2) {
-result_5586812941 = excHEX60gensym2_5586812983;
+result_5586812941 = excHEX60gensym2_5586812979;
 break BeforeRet;
 }
 
-var exc_repr_5586812984 = obj_exc_repr_5586812981;
-var s_5586812985 = ([99,97,108,108,105,110,103,32]).concat(HEX24__npythonZ79bjectsZstringobject_u19(exc_repr_5586812984.str),[115,104,111,117,108,100,32,104,97,118,101,32,114,101,116,117,114,110,101,100,32,97,110,32,105,110,115,116,97,110,99,101,32,111,102,32,66,97,115,101,69,120,99,101,112,116,105,111,110,44,32,110,111,116,32],result_5586812941.pybase_head.pyType.name);
-result_5586812941 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZstringobject_u1201(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(s_5586812985, false)));
+var exc_repr_5586812980 = obj_exc_repr_5586812977;
+var s_5586812981 = ([99,97,108,108,105,110,103,32]).concat(HEX24__npythonZ79bjectsZstringobject_u19(exc_repr_5586812980.str),[115,104,111,117,108,100,32,104,97,118,101,32,114,101,116,117,114,110,101,100,32,97,110,32,105,110,115,116,97,110,99,101,32,111,102,32,66,97,115,101,69,120,99,101,112,116,105,111,110,44,32,110,111,116,32],result_5586812941.pybase_head.pyType.name);
+result_5586812941 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZstringobject_u1201(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(s_5586812981, false)));
 }
 
 };
@@ -66082,29 +66080,29 @@ break Label2;
 Label4: {
 var k_9059699785 = null;
 Label5: {
-var i_9059701828 = null;
-var L_9059701829 = len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699724.table);
+var i_9059701827 = null;
+var L_9059701828 = len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699724.table);
 Label6: {
-var h_9059701831 = 0;
-var colontmp__9059701832 = 0;
-colontmp__9059701832 = (kw_9059699724.table.data).length - 1;
-var res_9059701833 = 0;
+var h_9059701830 = 0;
+var colontmp__9059701831 = 0;
+colontmp__9059701831 = (kw_9059699724.table.data).length - 1;
+var res_9059701832 = 0;
 Label7: {
 Label8: while (true) {
-if (!(res_9059701833 <= colontmp__9059701832)) break Label8;
-h_9059701831 = res_9059701833;
-if (isFilled__pureZcollectionsZtables_u31(kw_9059699724.table.data[chckIndx(h_9059701831, 0, (kw_9059699724.table.data).length - 1)].Field0)) {
-i_9059701828 = kw_9059699724.table.data[chckIndx(h_9059701831, 0, (kw_9059699724.table.data).length - 1)]["Field1"];
-k_9059699785 = i_9059701828;
+if (!(res_9059701832 <= colontmp__9059701831)) break Label8;
+h_9059701830 = res_9059701832;
+if (isFilled__pureZcollectionsZtables_u31(kw_9059699724.table.data[chckIndx(h_9059701830, 0, (kw_9059699724.table.data).length - 1)].Field0)) {
+i_9059701827 = kw_9059699724.table.data[chckIndx(h_9059701830, 0, (kw_9059699724.table.data).length - 1)]["Field1"];
+k_9059699785 = i_9059701827;
 exc_when_PyArg_UnpackKeywords_9059699769 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113((currentPyFuncName_9059699768).concat([40,41,32,103,111,116,32,97,110,32,117,110,101,120,112,101,99,116,101,100,32,107,101,121,119,111,114,100,32,97,114,103,117,109,101,110,116,32,39],HEX24__npythonZ79bjectsZpyobject66ase_u676(k_9059699785),[39]), false));
 break Label4;
-if (!((len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699724.table) == L_9059701829))) {
+if (!((len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699724.table) == L_9059701828))) {
 failedAssertImpl__stdZassertions_u86(makeNimstrLit("tables.nim(814, 13) `len(t) == L` the length of the table changed while iterating over it"));
 }
 
 }
 
-res_9059701833 = addInt(res_9059701833, 1);
+res_9059701832 = addInt(res_9059701832, 1);
 }
 };
 };
@@ -66189,29 +66187,29 @@ break Label2;
 Label5: {
 var k_9059699879 = null;
 Label6: {
-var i_9059701839 = null;
-var L_9059701840 = len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699807.table);
+var i_9059701838 = null;
+var L_9059701839 = len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699807.table);
 Label7: {
-var h_9059701842 = 0;
-var colontmp__9059701843 = 0;
-colontmp__9059701843 = (kw_9059699807.table.data).length - 1;
-var res_9059701844 = 0;
+var h_9059701841 = 0;
+var colontmp__9059701842 = 0;
+colontmp__9059701842 = (kw_9059699807.table.data).length - 1;
+var res_9059701843 = 0;
 Label8: {
 Label9: while (true) {
-if (!(res_9059701844 <= colontmp__9059701843)) break Label9;
-h_9059701842 = res_9059701844;
-if (isFilled__pureZcollectionsZtables_u31(kw_9059699807.table.data[chckIndx(h_9059701842, 0, (kw_9059699807.table.data).length - 1)].Field0)) {
-i_9059701839 = kw_9059699807.table.data[chckIndx(h_9059701842, 0, (kw_9059699807.table.data).length - 1)]["Field1"];
-k_9059699879 = i_9059701839;
+if (!(res_9059701843 <= colontmp__9059701842)) break Label9;
+h_9059701841 = res_9059701843;
+if (isFilled__pureZcollectionsZtables_u31(kw_9059699807.table.data[chckIndx(h_9059701841, 0, (kw_9059699807.table.data).length - 1)].Field0)) {
+i_9059701838 = kw_9059699807.table.data[chckIndx(h_9059701841, 0, (kw_9059699807.table.data).length - 1)]["Field1"];
+k_9059699879 = i_9059701838;
 exc_when_PyArg_UnpackKeywords_9059699852 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113((currentPyFuncName_9059699851).concat([40,41,32,103,111,116,32,97,110,32,117,110,101,120,112,101,99,116,101,100,32,107,101,121,119,111,114,100,32,97,114,103,117,109,101,110,116,32,39],HEX24__npythonZ79bjectsZpyobject66ase_u676(k_9059699879),[39]), false));
 break Label5;
-if (!((len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699807.table) == L_9059701840))) {
+if (!((len__npythonZ79bjectsZdictobjectZops_u2607(kw_9059699807.table) == L_9059701839))) {
 failedAssertImpl__stdZassertions_u86(makeNimstrLit("tables.nim(814, 13) `len(t) == L` the length of the table changed while iterating over it"));
 }
 
 }
 
-res_9059701844 = addInt(res_9059701844, 1);
+res_9059701843 = addInt(res_9059701843, 1);
 }
 };
 };
@@ -66257,17 +66255,17 @@ var Temporary1;
 var result_7549747221 = 0;
 
 BeforeRet: {
+var colontmpD__9059701854 = false;
 var colontmpD__9059701855 = false;
-var colontmpD__9059701856 = false;
 var tp_iternext_7549747222 = iter_p0.pybase_head.pyType.magicMethods.Field63;
 item_p1[item_p1_Idx] = tp_iternext_7549747222(iter_p0);
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(item_p1[item_p1_Idx])) {
-colontmpD__9059701855 = item_p1[item_p1_Idx].thrown;
-Temporary1 = colontmpD__9059701855;
+colontmpD__9059701854 = item_p1[item_p1_Idx].thrown;
+Temporary1 = colontmpD__9059701854;
 }
 else {
-colontmpD__9059701856 = false;
-Temporary1 = colontmpD__9059701856;
+colontmpD__9059701855 = false;
+Temporary1 = colontmpD__9059701855;
 }
 
 var isExc_7549747223 = Temporary1;
@@ -66307,10 +66305,10 @@ var Temporary4;
 var result_9428795401 = null;
 
 BeforeRet: {
-var colontmpD__9059701848 = null;
-var colontmpD__9059701852 = null;
+var colontmpD__9059701847 = null;
+var colontmpD__9059701851 = null;
+var colontmpD__9059701852 = false;
 var colontmpD__9059701853 = false;
-var colontmpD__9059701854 = false;
 if ((v_p0 == null)) {
 result_9428795401 = null_error__npythonZ79bjectsZabstractZhelpers_u6();
 break BeforeRet;
@@ -66328,43 +66326,43 @@ break BeforeRet;
 
 var fHEX60gensym0_9428795406 = v_p0.pybase_head.pyType.magicMethods.Field62;
 if ((fHEX60gensym0_9428795406 == null)) {
+var colontmpD__9059701848 = null;
 var colontmpD__9059701849 = null;
-var colontmpD__9059701850 = null;
 if (!((v_p0.pybase_head.pyType.magicMethods.Field57 == null))) {
-colontmpD__9059701849 = newPySeqIter__npythonZ79bjectsZiterobject_u577(v_p0);
-Temporary2 = colontmpD__9059701849;
+colontmpD__9059701848 = newPySeqIter__npythonZ79bjectsZiterobject_u577(v_p0);
+Temporary2 = colontmpD__9059701848;
 }
 else {
-var colontmpD__9059701851 = [];
+var colontmpD__9059701850 = [];
 var n_9428795417 = nimCopy(null, v_p0.pybase_head.pyType.name, NTI33554449);
 Label3: {
 var fmtRes_9428795422 = [mnewString(0)];
 nimAddStrStr(fmtRes_9428795422[0], [39]);;
 formatValue__npythonZ79bjectsZnumobjectsZnumobjects95comm95with95warn_u67(fmtRes_9428795422, 0, n_9428795417);
 nimAddStrStr(fmtRes_9428795422[0], [39,32,111,98,106,101,99,116,32,105,115,32,110,111,116,32,105,116,101,114,97,98,108,101]);;
-colontmpD__9059701851 = fmtRes_9428795422[0];
+colontmpD__9059701850 = fmtRes_9428795422[0];
 };
-colontmpD__9059701850 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(colontmpD__9059701851, false));
-Temporary2 = colontmpD__9059701850;
+colontmpD__9059701849 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(colontmpD__9059701850, false));
+Temporary2 = colontmpD__9059701849;
 }
 
-colontmpD__9059701848 = Temporary2;
-Temporary1 = colontmpD__9059701848;
+colontmpD__9059701847 = Temporary2;
+Temporary1 = colontmpD__9059701847;
 }
 else {
-colontmpD__9059701852 = fHEX60gensym0_9428795406(v_p0);
-Temporary1 = colontmpD__9059701852;
+colontmpD__9059701851 = fHEX60gensym0_9428795406(v_p0);
+Temporary1 = colontmpD__9059701851;
 }
 
 var it_9428795434 = Temporary1;
 var excHEX60gensym13_9428795436 = it_9428795434;
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(excHEX60gensym13_9428795436)) {
-colontmpD__9059701853 = excHEX60gensym13_9428795436.thrown;
-Temporary4 = colontmpD__9059701853;
+colontmpD__9059701852 = excHEX60gensym13_9428795436.thrown;
+Temporary4 = colontmpD__9059701852;
 }
 else {
-colontmpD__9059701854 = false;
-Temporary4 = colontmpD__9059701854;
+colontmpD__9059701853 = false;
+Temporary4 = colontmpD__9059701853;
 }
 
 if (Temporary4) {
@@ -66526,16 +66524,16 @@ var hi_9059700020 = subInt((fnameStr_9059700019).length, 1);
 var offset_9059700021 = 0;
 Label1: {
 var i_9059700027 = 0;
-var res_9059701861 = hi_9059700020;
+var res_9059701860 = hi_9059700020;
 Label2: {
 Label3: while (true) {
-if (!(0 <= res_9059701861)) break Label3;
-i_9059700027 = res_9059701861;
+if (!(0 <= res_9059701860)) break Label3;
+i_9059700027 = res_9059701860;
 if (((fnameStr_9059700019[chckIndx(i_9059700027, 0, (fnameStr_9059700019).length - 1)] == 47) || (fnameStr_9059700019[chckIndx(i_9059700027, 0, (fnameStr_9059700019).length - 1)] == 92))) {
 offset_9059700021 = addInt(i_9059700027, 1);
 }
 
-res_9059701861 = subInt(res_9059701861, 1);
+res_9059701860 = subInt(res_9059701860, 1);
 }
 };
 };
@@ -66631,12 +66629,12 @@ var Temporary11;
 var Temporary13;
 var Temporary14;
 
-var colontmpD__9059701865 = ({fill: 0, align: 0, sign: 0, alternateForm: false, padWithZero: false, minimumWidth: 0, precision: 0, typ: 0, endPosition: 0});
+var colontmpD__9059701864 = ({fill: 0, align: 0, sign: 0, alternateForm: false, padWithZero: false, minimumWidth: 0, precision: 0, typ: 0, endPosition: 0});
 ++excHandler;
 try {
 try {
-colontmpD__9059701865 = nimCopy(colontmpD__9059701865, parseStandardFormatSpecifier__pureZstrformat_u58([85], 0, false), NTI1358954510);
-colontmpD__9059701865;
+colontmpD__9059701864 = nimCopy(colontmpD__9059701864, parseStandardFormatSpecifier__pureZstrformat_u58([85], 0, false), NTI1358954510);
+colontmpD__9059701864;
 } finally {
 }
 --excHandler;
@@ -66645,14 +66643,14 @@ var prevJSError = lastJSError;
 lastJSError = EXCEPTION;
 --excHandler;
 if (lastJSError && (isObj(lastJSError.m_type, NTI134217746))) {
-var colontmpD__9059701866 = [];
+var colontmpD__9059701865 = [];
 Label4: {
 var fmtRes_9059700149 = [mnewString(0)];
 nimAddStrStr(fmtRes_9059700149[0], [105,110,118,97,108,105,100,32,102,111,114,109,97,116,32,115,116,114,105,110,103,58,32]);;
 formatValue__npythonZ79bjectsZpyobject_u406(fmtRes_9059700149, 0, [85]);
-colontmpD__9059701866 = fmtRes_9059700149[0];
+colontmpD__9059701865 = fmtRes_9059700149[0];
 };
-raiseException({message: nimCopy(null, colontmpD__9059701866, NTI33554449), parent: null, m_type: NTI5419040771, name: null, trace: [], up: null}, "FormatPyObjectError");
+raiseException({message: nimCopy(null, colontmpD__9059701865, NTI33554449), parent: null, m_type: NTI5419040771, name: null, trace: [], up: null}, "FormatPyObjectError");
 }
 else {
 	reraiseException();
@@ -66664,20 +66662,20 @@ var spec_9059700156 = nimCopy(null, Temporary1, NTI1358954510);
 switch (spec_9059700156.typ) {
 case 82:
 case 0:
+var colontmpD__9059701866 = false;
 var colontmpD__9059701867 = false;
-var colontmpD__9059701868 = false;
 if (!(!((obj_p1 == null)))) {
 failedAssertImpl__stdZassertions_u86([115,116,114,102,111,114,109,97,116,46,110,105,109,40,54,48,44,32,55,41,32,96,110,111,116,32,111,98,106,46,105,115,78,105,108,96,32]);
 }
 
 var reprHEX60gensym257_9059700166 = PyObject_ReprNonNil__npythonZ79bjectsZpyobject95apisZstrings_u36(obj_p1);
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(reprHEX60gensym257_9059700166)) {
-colontmpD__9059701867 = reprHEX60gensym257_9059700166.thrown;
-Temporary5 = colontmpD__9059701867;
+colontmpD__9059701866 = reprHEX60gensym257_9059700166.thrown;
+Temporary5 = colontmpD__9059701866;
 }
 else {
-colontmpD__9059701868 = false;
-Temporary5 = colontmpD__9059701868;
+colontmpD__9059701867 = false;
+Temporary5 = colontmpD__9059701867;
 }
 
 if (Temporary5) {
@@ -66704,20 +66702,20 @@ lastJSError = prevJSError;
 }
 break;
 case 83:
+var colontmpD__9059701868 = false;
 var colontmpD__9059701869 = false;
-var colontmpD__9059701870 = false;
 if (!(!((obj_p1 == null)))) {
 failedAssertImpl__stdZassertions_u86([115,116,114,102,111,114,109,97,116,46,110,105,109,40,54,48,44,32,55,41,32,96,110,111,116,32,111,98,106,46,105,115,78,105,108,96,32]);
 }
 
 var reprHEX60gensym266_9059700187 = PyObject_StrNonNil__npythonZ79bjectsZpyobject95apisZstrings_u83(obj_p1);
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(reprHEX60gensym266_9059700187)) {
-colontmpD__9059701869 = reprHEX60gensym266_9059700187.thrown;
-Temporary7 = colontmpD__9059701869;
+colontmpD__9059701868 = reprHEX60gensym266_9059700187.thrown;
+Temporary7 = colontmpD__9059701868;
 }
 else {
-colontmpD__9059701870 = false;
-Temporary7 = colontmpD__9059701870;
+colontmpD__9059701869 = false;
+Temporary7 = colontmpD__9059701869;
 }
 
 if (Temporary7) {
@@ -66767,28 +66765,28 @@ exc_5419040777[0] = newNotImplementedError__npythonZ79bjectsZexceptionsZsub_u188
 raiseException(new__npythonZ79bjectsZnumobjectsZintobjectZfromx_u346(), "FormatPyObjectError");
 break;
 case 84:
+var colontmpD__9059701870 = null;
 var colontmpD__9059701871 = null;
-var colontmpD__9059701872 = null;
+var colontmpD__9059701872 = false;
 var colontmpD__9059701873 = false;
-var colontmpD__9059701874 = false;
 var typ_9059700213 = obj_p1.pybase_head.pyType;
 if (spec_9059700156.alternateForm) {
-colontmpD__9059701871 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u57(typ_9059700213, 58);
-Temporary10 = colontmpD__9059701871;
+colontmpD__9059701870 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u57(typ_9059700213, 58);
+Temporary10 = colontmpD__9059701870;
 }
 else {
-colontmpD__9059701872 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u78(typ_9059700213);
-Temporary10 = colontmpD__9059701872;
+colontmpD__9059701871 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u78(typ_9059700213);
+Temporary10 = colontmpD__9059701871;
 }
 
 var type_nameHEX60gensym281_9059700215 = Temporary10;
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(type_nameHEX60gensym281_9059700215)) {
-colontmpD__9059701873 = type_nameHEX60gensym281_9059700215.thrown;
-Temporary11 = colontmpD__9059701873;
+colontmpD__9059701872 = type_nameHEX60gensym281_9059700215.thrown;
+Temporary11 = colontmpD__9059701872;
 }
 else {
-colontmpD__9059701874 = false;
-Temporary11 = colontmpD__9059701874;
+colontmpD__9059701873 = false;
+Temporary11 = colontmpD__9059701873;
 }
 
 if (Temporary11) {
@@ -66815,10 +66813,10 @@ lastJSError = prevJSError;
 }
 break;
 case 78:
+var colontmpD__9059701874 = null;
 var colontmpD__9059701875 = null;
-var colontmpD__9059701876 = null;
+var colontmpD__9059701876 = false;
 var colontmpD__9059701877 = false;
-var colontmpD__9059701878 = false;
 var typ_9059700227 = null;
 if (!(ofPyTypeObject__npythonZ79bjectsZpyobject66ase_u1078(obj_p1))) {
 exc_5419040777[0] = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(newPyAscii__npythonZ79bjectsZstringobject_u1208([37,78,32,97,114,103,117,109,101,110,116,32,109,117,115,116,32,98,101,32,97,32,116,121,112,101]));
@@ -66826,22 +66824,22 @@ raiseException(new__npythonZ79bjectsZnumobjectsZintobjectZfromx_u346(), "FormatP
 }
 
 if (spec_9059700156.alternateForm) {
-colontmpD__9059701875 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u57(typ_9059700227, 58);
-Temporary13 = colontmpD__9059701875;
+colontmpD__9059701874 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u57(typ_9059700227, 58);
+Temporary13 = colontmpD__9059701874;
 }
 else {
-colontmpD__9059701876 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u78(typ_9059700227);
-Temporary13 = colontmpD__9059701876;
+colontmpD__9059701875 = getFullyQualifiedName__npythonZ79bjectsZtypeobjectZgetters_u78(typ_9059700227);
+Temporary13 = colontmpD__9059701875;
 }
 
 var type_nameHEX60gensym289_9059700236 = Temporary13;
 if (ofPyExceptionObject__npythonZ79bjectsZexceptionsZbase_u806(type_nameHEX60gensym289_9059700236)) {
-colontmpD__9059701877 = type_nameHEX60gensym289_9059700236.thrown;
-Temporary14 = colontmpD__9059701877;
+colontmpD__9059701876 = type_nameHEX60gensym289_9059700236.thrown;
+Temporary14 = colontmpD__9059701876;
 }
 else {
-colontmpD__9059701878 = false;
-Temporary14 = colontmpD__9059701878;
+colontmpD__9059701877 = false;
+Temporary14 = colontmpD__9059701877;
 }
 
 if (Temporary14) {
@@ -66868,14 +66866,14 @@ lastJSError = prevJSError;
 }
 break;
 default: 
-var colontmpD__9059701879 = [];
+var colontmpD__9059701878 = [];
 Label16: {
 var fmtRes_9059700252 = [mnewString(0)];
 nimAddStrStr(fmtRes_9059700252[0], [105,110,118,97,108,105,100,32,102,111,114,109,97,116,32,115,116,114,105,110,103,58,32]);;
 formatValue__npythonZ79bjectsZpyobject_u406(fmtRes_9059700252, 0, [85]);
-colontmpD__9059701879 = fmtRes_9059700252[0];
+colontmpD__9059701878 = fmtRes_9059700252[0];
 };
-raiseException({message: nimCopy(null, colontmpD__9059701879, NTI33554449), parent: null, m_type: NTI5419040771, name: null, trace: [], up: null}, "FormatPyObjectError");
+raiseException({message: nimCopy(null, colontmpD__9059701878, NTI33554449), parent: null, m_type: NTI5419040771, name: null, trace: [], up: null}, "FormatPyObjectError");
 break;
 }
 
@@ -68070,15 +68068,15 @@ value_9059701434 = null;
 }
 else {
 if (!(ofPytracebackObject__npythonZ79bjectsZexceptions73mpl_u4658(value_9059701434))) {
-var colontmpD__9059701882 = [];
+var colontmpD__9059701881 = [];
 Label1: {
 var fmtRes_9059701442 = [mnewString(0)];
 nimAddStrStr(fmtRes_9059701442[0], [101,120,112,101,99,116,101,100,32,116,114,97,99,101,98,97,99,107,32,111,98,106,101,99,116,44,32,103,111,116,32,39]);;
 formatValue__npythonZ79bjectsZpyobject_u406(fmtRes_9059701442, 0, value_9059701434.pybase_head.pyType.name);
 nimAddStrStr(fmtRes_9059701442[0], [39]);;
-colontmpD__9059701882 = fmtRes_9059701442[0];
+colontmpD__9059701881 = fmtRes_9059701442[0];
 };
-result_9059701427 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(HEX26__npythonZ79bjectsZstringobject_u1222(newPyAscii__npythonZ79bjectsZstringobject_u1208([101,120,112,101,99,116,101,100,32,116,114,97,99,101,98,97,99,107,32,111,98,106,101,99,116]), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(colontmpD__9059701882, false)));
+result_9059701427 = newTypeError__npythonZ79bjectsZexceptionsZbase_u7257(HEX26__npythonZ79bjectsZstringobject_u1222(newPyAscii__npythonZ79bjectsZstringobject_u1208([101,120,112,101,99,116,101,100,32,116,114,97,99,101,98,97,99,107,32,111,98,106,101,99,116]), newPyString__npythonZ79bjectsZexceptionsZbaseapi_u113(colontmpD__9059701881, false)));
 break BeforeRet;
 }
 }
@@ -142040,7 +142038,7 @@ nimAddStrStr(result_p0[result_p0_Idx], alignString__pureZstrformat_u20(value_113
 function Py_GetBuildInfo__npythonZ77odulesZgetbuildinfo_u85() {
 var result_11408506966 = [];
 
-result_11408506966 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,49,55,97,51,57,56,101,44,32,50,48,50,54,45,48,55,45,51,49,44,32,49,57,58,50,52,58,51,56], NTI33554449);
+result_11408506966 = nimCopy(null, [104,101,97,100,115,47,109,97,115,116,101,114,45,100,105,114,116,121,58,55,53,55,57,55,48,54,44,32,50,48,50,54,45,48,56,45,48,49,44,32,48,55,58,50,57,58,50,50], NTI33554449);
 
 return result_11408506966;
 
@@ -142101,7 +142099,7 @@ return result_11408506958;
 function gitversion__npythonZ77odulesZgetbuildinfo_u75() {
 var result_11408506956 = [];
 
-result_11408506956 = nimCopy(null, [49,55,97,51,57,56,101], NTI33554449);
+result_11408506956 = nimCopy(null, [55,53,55,57,55,48,54], NTI33554449);
 
 return result_11408506956;
 
